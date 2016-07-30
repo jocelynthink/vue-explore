@@ -1,17 +1,12 @@
 <template>
-  <div  class="dir-area" 
-        v-touch:swipeup="swipeup"  
-        v-touch:swipedown="swipedown">
-    <div class="dir-icon dir-one"></div>
-    <div class="dir-icon dir-two"></div>
-  </div>
-  <div class="music_btn">
+<!--   <div class="music_btn">
     <audio src="" loop="loop" id="music"></audio>
-  </div>
+  </div> -->
+  <welcome v-if="isLoading"></welcome>
   <div  class="scroll-list" 
         v-touch:swipeup="swipeup"  
         v-touch:swipedown="swipedown"
-        :style="{'height':`${this.count * 100}%`,'marginTop':`${-100*(this.current-1)}vh`}">
+        :style="{'height':`${this.count * 100}%`,'marginTop':`${-100*(this.current-1)}vh`}" v-if="!isLoading">
     <page1 :current.sync="current"></page1>
     <page2 :current.sync="current"></page2> 
 
@@ -21,6 +16,15 @@
     <div class="page4">
       
     </div>
+    <div class="page5">
+      
+    </div>
+    <div class="page6">
+      
+    </div>
+    <div class="page7">
+      
+    </div>
   </div>
 
 </template>
@@ -28,34 +32,51 @@
 <script>
 import Page1 from './components/Page1'
 import Page2 from './components/Page2'
-
+import Welcome from './components/Welcome'
 export default {
   components: {
     Page1,
-    Page2
+    Page2,
+    Welcome
   },
   data () {
     return {
       isPage1: false,
       isPage2: false,
       current: 1,
-      count: 4
+      count: 7,
+      isLoading: true,
+      preventSwipe: true
     }
   },
   methods: {
     swipedown () {
+      console.log('ddd');
       if(this.current===1){
         console.log("最前面一张了");
-      }else{
+      }else if(!this.preventSwipe){
         this.current--;
+        this.preventSwipe = true;
       }
     },
     swipeup () {
+      console.log('swipeup');
+      console.log(this.preventSwipe);
       if(this.current===this.count){
         console.log("最后一张了");
-      }else{
+      }else if(!this.preventSwipe){
         this.current ++;
+        this.preventSwipe = true;
       }
+    }
+  },
+  events: {
+    'isLoaded': function(){
+      console.log('isLoaded');
+      this.isLoading = false;
+    },
+    'preventSwipe': function(){
+        this.preventSwipe = false;
     }
   }
 }
@@ -76,7 +97,20 @@ body {
   -webkit-tap-highlight-color: transparent;
   /*overflow: hidden;*/
 }
-.dir-area {
+.dir-next {
+  background-image: url(./assets/images/p1_next.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  width: 70.5px;
+  height: 68px;
+  margin-left: -35.25px;
+  z-index: 100;
+}
+
+/*.dir-area {
   position: absolute;
   left: 50%;
   bottom: 20px;
@@ -85,26 +119,33 @@ body {
   margin-left: -20px;
   z-index: 99;
 }
-.dir-area .dir-one {
-  background: url(./assets/images/dir.png) no-repeat;
-  background-size: 100%;
-  position: absolute;
+.dir-area .dir-icon {
   top: 0;
   left: 50%;
   margin-left: -19px;
   width: 39px;
   height: 18px;
-}
-.dir-area .dir-two {
-  background: url(./assets/images/dir.png) no-repeat;
+  background: url(./assets/images/p1_next.png) no-repeat;
   background-size: 100%;
   position: absolute;
-  top: 10px;
+  -webkit-animation: dir .5s linear 0s infinite alternate;
+}
+@keyframes dir {
+  0% {
+    opacity: .5;
+  }
+}
+.dir-area .dir-one {
+  top: 0;
   left: 50%;
   margin-left: -19px;
   width: 39px;
-  height: 19px;
+  height: 18px;
+  -webkit-animation: dir .5s linear .5s infinite alternate;
 }
+.dir-area .dir-two {
+  top: 10px;
+}*/
 .music_btn {
   background: url(./assets/images/music_icon.png) 0px 1px no-repeat;
   background-size: 32px 62px;
@@ -122,26 +163,46 @@ body {
   height: 100vh;
   /*overflow: hidden;*/
 }
+
 .page1 {
   width: 100vw;
   height: 100vh;
-  /*background: #000;*/
   position: relative;
 }
 .page2 {
   width: 100vw;
   height: 100vh;
-  /*background: blue;*/
   position: relative;
 }
 .page3 {
   width: 100vw;
   height: 100vh;
   background: yellow;
+  position: relative;
 }
 .page4 {
   width: 100vw;
   height: 100vh;
   background: green;
+  position: relative;
 }
+.page5 {
+  width: 100vw;
+  height: 100vh;
+  background: red;
+  position: relative;
+}
+.page6 {
+  width: 100vw;
+  height: 100vh;
+  background: pink;
+  position: relative;
+}
+.page7 {
+  width: 100vw;
+  height: 100vh;
+  background: blue;
+  position: relative;
+}
+
 </style>
