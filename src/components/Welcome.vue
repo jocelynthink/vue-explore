@@ -122,8 +122,7 @@ export default {
 .loading {
 	width: 100vw;
 	height: 100vh;
-	background: #0B141F;
-	background: linear-gradient(top ,#000025 0%, #03090F 100%);
+	background: linear-gradient(top , #03090F 0%, #000025 30%, #03090F 100%);
 }
 .bg {
     background-image: url(../assets/images/loading.png);

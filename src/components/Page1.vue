@@ -40,9 +40,9 @@ export default {
   ready () {
     console.log(this.current);
     var self = this;
-    setTimeout(function(){
-      self.$dispatch('preventSwipe');
-    },2000);
+    // setTimeout(function(){
+    //   self.$dispatch('preventSwipe');
+    // },2000);
   }
 }
 </script>
@@ -102,6 +102,7 @@ export default {
   left: 50%;
   margin-left: -180px;
 }
+
 .p1-desc .p1-desc-light {
   background-image: url(../assets/images/p1_light.png);
   background-size: 100% 100%;
@@ -212,6 +213,7 @@ export default {
   right: 8px;
   top: 41.5px;
 }
+
 .p1-title {
   background: url(../assets/images/p1_title.png) no-repeat;
   background-size: 100%;
@@ -319,7 +321,7 @@ export default {
     opacity: 1;
   }
   100% {
-    bottom: 0px;
+    bottom: 4px;
     opacity: 1;
   }
 }
@@ -391,7 +393,7 @@ export default {
   }
   100% {
     opacity: 1;
-    left: 166px;
+    left: 160px;
   }
 }
 .page1 .dir-next {
@@ -443,4 +445,74 @@ export default {
   -webkit-transform: translate(0,-100%);
           transform: translate(0,-100%);
 }*/
+
+
+@media only screen
+and (max-device-width : 320px){
+  .p1-top {
+    width: 180px;
+    margin-left: -90px;
+  }
+  .p1-desc {
+    top: 258px;
+    width: 320px;
+    margin-left: -160px;
+  }
+  .p1-desc .p1-desc-top{
+    width: 305px;
+    margin-left: -154px;
+  }
+  .p1-desc .p1-desc-dress-top{
+    width: 305px;
+    margin-left: -154px;
+  }
+  .p1-desc .p1-desc-bottom {
+    width: 305px;
+    margin-left: -154px;
+  }
+  .p1-desc .p1-desc-dress-bottom {
+    width: 305px;
+    margin-left: -154px;
+  }
+
+  .p1-desc .p1-desc-left-circle1 {
+    left: 8px;
+    top: 18.5px;
+  }
+  .p1-desc .p1-desc-left-circle2 {
+    left: 8px;
+    top: 41.5px;
+  }
+  .p1-desc .p1-desc-right-circle1 {
+    right: 8px;
+    top: 18.5px;
+  }
+  .p1-desc .p1-desc-right-circle2 {
+    right: 8px;
+    top: 41.5px;
+  }
+  .play .p1-desc .p1-desc-light {
+    opacity: 0;
+    -webkit-animation: light-show .5s linear 1.5s forwards;
+  }
+  @keyframes light-show {
+    0% {
+      opacity: 1;
+      left: 0px;
+    }
+    100% {
+      opacity: 1;
+      left: 130px;
+    }
+  }
+}
+@media only screen
+and (max-device-height: 480px) { 
+  .p1-top {
+    top: 40px;
+  }
+  .p1-desc {
+    top: 210px;
+  }
+}
 </style>

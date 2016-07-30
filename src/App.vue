@@ -52,11 +52,13 @@ export default {
   methods: {
     swipedown () {
       console.log('ddd');
+      console.log(this.current);
       if(this.current===1){
         console.log("最前面一张了");
       }else if(!this.preventSwipe){
         this.current--;
         this.preventSwipe = true;
+        this.time(this.current);
       }
     },
     swipeup () {
@@ -67,15 +69,33 @@ export default {
       }else if(!this.preventSwipe){
         this.current ++;
         this.preventSwipe = true;
+        this.time(this.current);
       }
+    },
+    time (num)　{
+      var second = 0;
+      switch (num){
+        case 1:
+          second = 2;
+          break;
+        case 2:
+          second = 4;
+          break;
+      } 
+
+      setTimeout(() => {
+        this.preventSwipe = false;
+      }, second * 1000)
     }
   },
   events: {
     'isLoaded': function(){
       console.log('isLoaded');
       this.isLoading = false;
+      this.time(this.current);
     },
     'preventSwipe': function(){
+      console.log('preventSwipe')
         this.preventSwipe = false;
     }
   }
@@ -93,7 +113,7 @@ html ,body {
   padding: 0;
 }
 body {
-  background: #010204;
+   background: linear-gradient(top , #03090F 0%, #000025 30%, #03090F 100%);
   -webkit-tap-highlight-color: transparent;
   /*overflow: hidden;*/
 }
@@ -161,7 +181,7 @@ body {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  /*overflow: hidden;*/
+  background: linear-gradient(top , #03090F 0%, #000025 30%, #03090F 100%);
 }
 
 .page1 {
@@ -172,6 +192,7 @@ body {
 .page2 {
   width: 100vw;
   height: 100vh;
+  /*background: linear-gradient(top , #03090F 0%, #000025 30%, #03090F 100%);*/
   position: relative;
 }
 .page3 {
