@@ -115,6 +115,7 @@ export default {
 	top: 8px;
 	left: 50%;
 	margin-left: -186.25px;
+	background: rgba(0,8,22,0.4);
 }
 .p2-desc .p2-top {
 	background-image: url(../assets/images/p2_top.png);

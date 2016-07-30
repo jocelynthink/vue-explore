@@ -9,10 +9,7 @@
         :style="{'height':`${this.count * 100}%`,'marginTop':`${-100*(this.current-1)}vh`}" v-if="!isLoading">
     <page1 :current.sync="current"></page1>
     <page2 :current.sync="current"></page2> 
-
-    <div class="page3">
-      
-    </div>
+    <page3 :current.sync="current"></page3>
     <div class="page4">
       
     </div>
@@ -32,11 +29,13 @@
 <script>
 import Page1 from './components/Page1'
 import Page2 from './components/Page2'
+import Page3 from './components/Page3'
 import Welcome from './components/Welcome'
 export default {
   components: {
     Page1,
     Page2,
+    Page3,
     Welcome
   },
   data () {
@@ -79,6 +78,9 @@ export default {
           second = 2;
           break;
         case 2:
+          second = 4;
+          break;
+        case 3: 
           second = 4;
           break;
       } 
@@ -198,7 +200,6 @@ body {
 .page3 {
   width: 100vw;
   height: 100vh;
-  background: yellow;
   position: relative;
 }
 .page4 {
