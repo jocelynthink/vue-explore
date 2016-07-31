@@ -96,7 +96,7 @@ export default {
 }
 .p4-desc .p4-desc-people-eara {
 	position: absolute;
-	top: 60px;
+	top: 76px;
 	left: 50%;
 	width: 257px;
 	height: 314.5px;
@@ -121,7 +121,7 @@ export default {
 	width: 11.5px;
 	height: 207px;
 	left: 0;
-	top: 42px;
+	top: 46px;
 }
 .p4-desc .p4-desc-people-right {
 	background-image: url(../assets/images/p4_people_right.png);
@@ -131,7 +131,7 @@ export default {
 	width: 11.5px;
 	height: 207px;
 	right: 0px;
-	top: 42px;
+	top: 46px;
 }
 .p4-desc .circle {
   background-image: url(../assets/images/p1_circle.png);
@@ -143,18 +143,18 @@ export default {
 }
 .p4-desc .p4-left-circle1 {
 	left: 15px;
-	top: 102px;
+	top: 122px;
 }
 .p4-desc .p4-left-circle2 {
 	left: 15px;
-	top: 126px;
+	top: 146px;
 }
 .p4-desc .p4-right-circle1 {
 	right: 15px;
-	top: 294px;
+	top: 286px;
 }
 .p4-desc .p4-right-circle2 {
 	right: 15px;
-	top: 318px;
+	top: 310px;
 }
 </style>

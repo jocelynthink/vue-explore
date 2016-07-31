@@ -3,20 +3,16 @@
     <audio src="" loop="loop" id="music"></audio>
   </div> -->
   <welcome v-if="isLoading"></welcome>
-  <div  class="scroll-list" 
-        v-touch:swipeup="swipeup"  
+  <div  id="srcolldiv" class="scroll-list"
+        v-touch:swipeup="swipeup"
         v-touch:swipedown="swipedown"
-        :style="{'height':`${this.count * 100}%`,'marginTop':`${-100*(this.current-1)}vh`}" v-if="!isLoading">
+       v-if="!isLoading">
     <page1 :current.sync="current"></page1>
-    <page2 :current.sync="current"></page2> 
+    <page2 :current.sync="current"></page2>
     <page3 :current.sync="current"></page3>
     <page4 :current.sync="current"></page4>
-    <div class="page5">
-      
-    </div>
-    <div class="page6">
-      
-    </div>
+    <page5 :current.sync="current"></page5>
+    <page6 :current.sync="current"></page6>
     <page7 :current.sync="current"></page7>
   </div>
 
@@ -27,6 +23,8 @@ import Page1 from './components/Page1'
 import Page2 from './components/Page2'
 import Page3 from './components/Page3'
 import Page4 from './components/Page4'
+import Page5 from './components/Page5'
+import Page6 from './components/Page6'
 import Page7 from './components/Page7'
 import Welcome from './components/Welcome'
 export default {
@@ -35,6 +33,8 @@ export default {
     Page2,
     Page3,
     Page4,
+    Page5,
+    Page6,
     Page7,
     Welcome
   },
@@ -45,7 +45,8 @@ export default {
       current: 1,
       count: 7,
       isLoading: true,
-      preventSwipe: true
+      preventSwipe: true,
+      height: document.body.clientHeight
     }
   },
   methods: {
@@ -58,6 +59,7 @@ export default {
         this.current--;
         this.preventSwipe = true;
         this.time(this.current);
+        this.changePage();
       }
     },
     swipeup () {
@@ -69,7 +71,13 @@ export default {
         this.current ++;
         this.preventSwipe = true;
         this.time(this.current);
+        this.changePage();
       }
+    },
+    changePage(){
+      var div = document.getElementById('srcolldiv');
+      var top = - ((this.current - 1) * this.height) + 'px';
+      div.style.WebkitTransform = 'translateY(' + top + ')';
     },
     time (num)　{
       var second = 0;
@@ -80,10 +88,10 @@ export default {
         case 2:
           second = 4;
           break;
-        case 3: 
+        case 3:
           second = 4;
           break;
-      } 
+      }
 
       setTimeout(() => {
         this.preventSwipe = false;
