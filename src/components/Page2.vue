@@ -2,6 +2,9 @@
 	<div class="page2" v-bind:class="{'play':current===2}">
 		<div class="p2-bg-left"></div>
 		<div class="p2-bg-right"></div>
+		<div class="p2-bg-right"></div>
+		<div class="p2-bg-left-grid"></div>
+		<div class="p2-bg-right-grid"></div>
 		<div class="p2-desc">
 			<div class="p2-top"></div>
 			<div class="p2-bottom"></div>
@@ -24,10 +27,10 @@
 			<div class="p2-left-circle2 circle"></div>
 			<div class="p2-right-circle1 circle"></div>
 			<div class="p2-right-circle2 circle"></div>
-			<div class="dir-next"></div>
 			<div class="p2-up-text"></div>
 			<div class="p2-up-people"></div>
 		</div>
+		<div class="dir-next"></div>
 <!--     <div class="p2-bg"></div>
   	<div class="p2-text">
 		  <div class="p2-text-inner"></div>
@@ -107,6 +110,26 @@ export default {
 	height: 367px;
 	right: 0px;
 	top: 99px;
+}
+.p2-bg-left-grid {
+	background-image: url(../assets/images/p2_bg_left_grid.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 161.5px;
+	height: 326px;
+	left: 0px;
+	top: 118px;
+}
+.p2-bg-right-grid {
+	background-image: url(../assets/images/p2_bg_right_grid.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 194.5px;
+	height: 400px;
+	right: 0px;
+	top: 82px;
 }
 .p2-desc {
 	position: absolute;
@@ -284,7 +307,7 @@ export default {
 	right: 8px;
 	top: 380px;
 }
-.p2-desc .dir-next {
+/*.p2-desc .dir-next {
 	background-image: url(../assets/images/p1_next.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
@@ -295,7 +318,7 @@ export default {
 	height: 68px;
 	margin-left: -35.25px;
 	z-index: 100;
-}
+}*/
 
 .p2-desc .p2-up-text {
 	background-image: url(../assets/images/p2_up_text.png);
@@ -324,9 +347,9 @@ export default {
 /*拉开*/
 .play .p2-desc .p2-top {
 	opacity: 0;
-	-webkit-animation: showTop .5s linear .5s forwards;
+	-webkit-animation: show-top .5s linear .5s forwards;
 }
-@keyframes showTop {
+@keyframes show-top {
 	0% {
 	  top: 280px;
 	  opacity: 1;
@@ -363,10 +386,51 @@ export default {
 		opacity: 1;
 	}
 }
+.play .p2-bg-left-grid {
+	opacity: 0;
+	-webkit-animation: showIn .4s linear 1s forwards;
+}
 /* 右脸出现 */
 .play .p2-bg-right {
 	opacity: 0;
 	-webkit-animation: showIn .4s linear 1.4s forwards;
+}
+.play .p2-bg-right-grid {
+	opacity: 0;
+	-webkit-animation: showIn .4s linear 1.4s forwards;
+}
+/* 网格抖动 */
+.play .p2-bg-left-grid{
+	opacity: 0;
+	-webkit-animation: shake-left .1s linear 1.8s infinite alternate;
+}
+@keyframes shake-left {
+	0% {
+		top: 117px;
+		left: -1;
+		opacity: 1;
+	}
+	100% {
+		top: 119px;
+		opacity: 1;
+		left: 1;
+	}
+}
+.play .p2-bg-right-grid {
+	opacity: 0;
+	-webkit-animation: shake-right .1s linear 1.8s infinite alternate;
+}
+@keyframes shake-right {
+	0% {
+		top: 81px;
+		opacity: 1;
+		right: -1;
+	}
+	100% {
+		top: 83px;
+		opacity: 1;
+		right: 1;
+	}
 }
 /* 出现其余的组件 */
 .play .p2-desc .p2-time {
@@ -406,7 +470,7 @@ export default {
 	opacity: 0;
 	-webkit-animation: showIn .2s linear 1.8s forwards;
 }
-.play .p2-desc .dir-next {
+.play .dir-next {
 	opacity: 0;
 	-webkit-animation: showIn .5s linear 4s forwards;
 }

@@ -213,18 +213,6 @@ export default {
   right: 8px;
   top: 41.5px;
 }
-
-.p1-title {
-  background: url(../assets/images/p1_title.png) no-repeat;
-  background-size: 100%;
-  position: absolute;
-  width: 172px;
-  height: 59px;
-  top: 140px;
-  left: 50%;
-  margin-left: -86px;
-}
-
 .play .p1-logo {
   opacity: 0;
   -webkit-animation: showIn .5s linear .5s forwards;

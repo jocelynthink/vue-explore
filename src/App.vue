@@ -10,18 +10,14 @@
     <page1 :current.sync="current"></page1>
     <page2 :current.sync="current"></page2> 
     <page3 :current.sync="current"></page3>
-    <div class="page4">
-      
-    </div>
+    <page4 :current.sync="current"></page4>
     <div class="page5">
       
     </div>
     <div class="page6">
       
     </div>
-    <div class="page7">
-      
-    </div>
+    <page7 :current.sync="current"></page7>
   </div>
 
 </template>
@@ -30,12 +26,16 @@
 import Page1 from './components/Page1'
 import Page2 from './components/Page2'
 import Page3 from './components/Page3'
+import Page4 from './components/Page4'
+import Page7 from './components/Page7'
 import Welcome from './components/Welcome'
 export default {
   components: {
     Page1,
     Page2,
     Page3,
+    Page4,
+    Page7,
     Welcome
   },
   data () {
@@ -62,7 +62,7 @@ export default {
     },
     swipeup () {
       console.log('swipeup');
-      console.log(this.preventSwipe);
+      console.log('上滑'+this.current);
       if(this.current===this.count){
         console.log("最后一张了");
       }else if(!this.preventSwipe){
@@ -183,7 +183,6 @@ body {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(top , #03090F 0%, #000025 30%, #03090F 100%);
 }
 
 .page1 {
@@ -194,7 +193,6 @@ body {
 .page2 {
   width: 100vw;
   height: 100vh;
-  /*background: linear-gradient(top , #03090F 0%, #000025 30%, #03090F 100%);*/
   position: relative;
 }
 .page3 {
@@ -205,7 +203,7 @@ body {
 .page4 {
   width: 100vw;
   height: 100vh;
-  background: green;
+  background: linear-gradient(top , #03090F 0%, #000025 30%, #03090F 100%);
   position: relative;
 }
 .page5 {
@@ -223,7 +221,6 @@ body {
 .page7 {
   width: 100vw;
   height: 100vh;
-  background: blue;
   position: relative;
 }
 
