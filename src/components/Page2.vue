@@ -188,7 +188,7 @@ export default {
 	background: rgba(255,255,255,.5);
 	box-shadow: 0px 0px 5px #FFFFFF;
 	width: 1px;
-	height: 456px;
+	height: 480px;
 	position: absolute;
 	left: 18px;
 	margin-top: 15px;
@@ -216,29 +216,29 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 39px;
-	height: 12px;
-	top: 438.5px;
-	left: 14px;
+	width: 56px;
+	height: 17.5px;
+	top: 456px;
+	left: 24px;
 }
 .p2-desc .p2-2016 {
 	background-image: url(../assets/images/p2_2016.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width:40px;
-	height: 12.5px;
-	top: 438.5px;
-	right: 14px;
+	width: 58px;
+	height: 17.5px;
+	top: 456px;
+	right: 20px;
 }
 .p2-desc .p2-time-base {
 	background-image: url(../assets/images/p2_time_base.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 327.5px;
+	width: 329.5px;
 	height: 24px;
-	top: 459.5px;
+	top: 482.5px;
 	right: 14px;
 	left: 50%;
 	margin-left: -163.75px;
@@ -250,7 +250,7 @@ export default {
 	position: absolute;
 	width: 31.5px;
 	height: 14.4px;
-	top: 465px;
+	top: 488px;
 	left: 94px;
 }
 .p2-desc .p2-time-line {
@@ -260,7 +260,7 @@ export default {
 	position: absolute;
 	width: 90px;
 	height: 1px;
-	top: 471.5px;
+	top: 494.5px;
 	left: 23px;
 }
 .p2-desc .p2-1935-text {
@@ -268,20 +268,20 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 109px;
-	height: 25.5px;
-	top: 493.5px;
-	left: 14px;
+	width: 130.5px;
+	height: 29px;
+	top: 514.5px;
+	left: 24px;
 }
 .p2-desc .p2-2016-text {
 	background-image: url(../assets/images/p2_2016_text.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 68.5px;
-	height: 25px;
-	top: 493.5px;
-	right: 14px;
+	width: 86px;
+	height: 27px;
+	top: 514.5px;
+	right: 20px;
 }
 .p2-desc .circle {
   background-image: url(../assets/images/p1_circle.png);

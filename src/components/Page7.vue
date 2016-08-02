@@ -8,6 +8,8 @@
 			<div class="p7-desc-button"></div>
 			<div class="p7-desc-text"></div>
 			<div class="p7-desc-logo"></div>
+			<div class="p7-line-left"></div>
+			<div class="p7-line-right"></div>
 			<div class="p7-left-circle1 circle"></div>
 			<div class="p7-left-circle2 circle"></div>
 			<div class="p7-right-circle1 circle"></div>
@@ -27,12 +29,12 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .page7 {
 	background-image: url(../assets/images/p7_bg.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
-	position: absolute;
+	position: relative;
 }
 .p7-desc {
 	position: absolute;
@@ -111,6 +113,28 @@ export default {
 	top: 391px;
 	left: 50%;
 	margin-left: -43.25px;
+ }
+ .p7-desc .p7-line-left {
+ 	background-image: url(../assets/images/p2_light.png);
+ 	background-size: 100% 100%;
+ 	background-repeat: no-repeat;
+ 	position: absolute;
+ 	width: 1px;
+ 	height: 276px;
+ 	left: 8px;
+ 	top: 50px;
+ 	z-index: 10;
+ }
+ .p7-desc .p7-line-right {
+ 	background-image: url(../assets/images/p2_light.png);
+ 	background-size: 100% 100%;
+ 	background-repeat: no-repeat;
+ 	position: absolute;
+ 	width: 1px;
+ 	height: 276px;
+ 	right: 6px;
+ 	top: 50px;
+ 	z-index: 10;
  }
  .circle {
    background-image: url(../assets/images/p1_circle.png);
@@ -203,6 +227,14 @@ export default {
 	opacity: 0;
 	-webkit-animation: show-in .5s linear 1s forwards;
 }
+.play .p7-desc .p7-line-left {
+	opacity: 0;
+	-webkit-animation: show-in .5s linear 1s forwards;
+}
+.play .p7-desc .p7-line-right {
+	opacity: 0;
+	-webkit-animation: show-in .5s linear 1s forwards;
+}
 .play .dir-next {
 	opacity: 0;
 	-webkit-animation: show-in .2s linear 1.5s forwards;
@@ -217,5 +249,22 @@ export default {
   100% {
     opacity: 1;
   }
+}
+/* 网格抖动 */
+.play .p7-bg-grid {
+	opacity: 0;
+	-webkit-animation: shake-bg .1s linear 1s infinite alternate;
+}
+@keyframes shake-bg {
+	0% {
+		top: 0px;
+		opacity: 1;
+		right: -1;
+	}
+	100% {
+		top: 2px;
+		opacity: 1;
+		right: 1;
+	}
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-	<div class="page4" v-bind:class="{'play':current === 5}">
+	<div class="page5" v-bind:class="{'play':current === 5}">
 		<div class="p5-bg-grid"></div>
 		<div class="p5-desc">
 			<div class="p5-desc-top"></div>
@@ -12,6 +12,8 @@
 				<div class="p5-desc-center-penguin-right"></div>
 			</div>
 			<div class="p5-desc-title"></div>
+			<div class="p5-line-left"></div>
+			<div class="p5-line-right"></div>
 			<div class="p5-left-circle1 circle"></div>
 			<div class="p5-left-circle2 circle"></div>
 			<div class="p5-right-circle1 circle"></div>
@@ -31,7 +33,13 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
+.page5 {
+	background-image: url(../assets/images/p7_bg.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: relative;
+}
 .p5-bg-grid {
 	background-image: url(../assets/images/p4_bg_grid.png);
 	background-size: 100% 100%;
@@ -45,7 +53,7 @@ export default {
 .p5-desc {
 	position: absolute;
 	width: 372.5px;
-	height: 625px;
+	height: 411px;
 	top: 8px;
 	left: 50%;
 	margin-left: -186.25px;
@@ -63,12 +71,12 @@ export default {
 	margin-left: -180px;
 }
 .p5-desc .p5-desc-bottom {
-	background-image: url(../assets/images/p2_bottom.png);
+	background-image: url(../assets/images/p5_bottom.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
 	width: 353px;
-	height: 5px;
+	height: 2.5px;
 	left: 50%;
 	bottom: 0px;
 	margin-left: -176.5px;
@@ -121,7 +129,7 @@ export default {
 	position: absolute;
 	width: 11.5px;
 	height: 207px;
-	left: 0;
+	left: 0px;
 	top: 6px;
 }
 .p5-desc .p5-desc-center-penguin-right {
@@ -134,7 +142,39 @@ export default {
 	right: 0px;
 	top: 6px;
 }
-
+.p5-desc .p5-desc-title {
+	background-image: url(../assets/images/p5_title.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 177px;
+	height: 68px;
+	left: 50%;
+	top: 377px;
+	margin-left: -88.5px;
+}
+.p5-desc .p5-line-left {
+	background-image: url(../assets/images/p2_light.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 1px;
+	height: 276px;
+	left: 8px;
+	top: 50px;
+	z-index: 10;
+}
+.p5-desc .p5-line-right {
+	background-image: url(../assets/images/p2_light.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 1px;
+	height: 276px;
+	right: 6px;
+	top: 50px;
+	z-index: 10;
+}
 .p5-desc .circle {
   background-image: url(../assets/images/p1_circle.png);
   background-size: 100% 100%;
@@ -158,5 +198,172 @@ export default {
 .p5-desc .p5-right-circle2 {
 	right: 15px;
 	top: 310px;
+}
+/*上下拉开*/
+.play .p5-desc-top {
+	opacity: 0;
+	-webkit-animation: show-top .5s linear .5s forwards;
+}
+@keyframes show-top {
+	0% {
+	  top: 160px;
+	  opacity: 1;
+	}
+	100% {
+	  top: 0px;
+	  opacity: 1;
+	}
+}
+.play .p5-desc-bottom {
+	opacity: 0;
+	-webkit-animation: show-bottom .5s linear .5s forwards;
+}
+@keyframes show-bottom {
+	0% {
+	  bottom: 160px;
+	  opacity: 1;
+	}
+	100% {
+	  bottom: 0px;
+	  opacity: 1;
+	}
+}
+.play .p5-bg-grid {
+	opacity: 0;
+	-webkit-animation: showIn .5s linear 1s forwards;
+}
+.play .p5-desc-title {
+	opacity: 0;
+	-webkit-animation: showIn .5s linear 1s forwards;
+}
+.play .p5-desc .p5-line-left {
+	opacity: 0;
+	-webkit-animation: showIn .5s linear 1s forwards;
+}
+.play .p5-desc .p5-line-right {
+	opacity: 0;
+	-webkit-animation: showIn .5s linear 1s forwards;
+}
+@keyframes showIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.play .p5-desc-center-penguin-left {
+	opacity: 0;
+	-webkit-animation: penguin-left .5s linear 1.5s forwards;
+}
+@keyframes penguin-left {
+   	0% {
+     	left: 110px;
+     	opacity: 1;
+   	}
+   	100% {
+     	left: 0;
+     	opacity: 1;
+   	}
+}
+.play .p5-desc-center-penguin-right {
+	opacity: 0;
+	-webkit-animation: penguin-right .5s linear 1.5s forwards;
+}
+ @keyframes penguin-right {
+    0% {
+     	right: 110px;
+     	opacity: 1;
+   	}
+   	100% {
+     	right: 0;
+     	opacity: 1;
+   	}
+ }
+.play .p5-desc-center-penguin {
+	opacity: 0;
+	-webkit-animation: showIn .5s linear 1.2s forwards;
+}
+.play .p5-desc-center-penguin-light {
+	opacity: 0;
+	-webkit-animation: showIn .5s linear 1.2s forwards;
+}
+.play .p5-desc-center-penguin-bottom {
+	opacity: 0;
+	-webkit-animation: showIn .5s linear 1.2s forwards;
+}
+/*四个圆角出现闪动*/
+.play .p5-desc .circle {
+	opacity: 0;
+	-webkit-animation: circle-show .5s linear 1.5s forwards;
+}
+@keyframes circle-show {
+	0% {
+	   opacity: 0;
+	}
+	50% {
+	   opacity: 1;
+	}
+	75% {
+	   opacity: 0;
+	}
+	100% {
+	   opacity: 1;
+	}
+}
+
+.play .p5-desc-center-penguin {
+	opacity: 0;
+	-webkit-animation: penguin-rotate 5s linear 1.5s infinite alternate;
+}
+@keyframes penguin-rotate {
+	0% {
+		opacity: 1;
+		transform: rotateY(-30deg);
+	}
+	50% {
+		opacity: 1;
+		transform: rotateY(0deg);
+	}
+	100% {
+		opacity: 1;
+		transform: rotateY(30deg);
+	}
+}
+.play .p5-desc-center-penguin-light {
+	opacity: 0;
+	-webkit-animation: penguin-light 5s linear 1.5s infinite;
+}
+@keyframes penguin-light {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+.play .dir-next {
+	opacity: 0;
+	-webkit-animation: showIn .5s linear 2s forwards;
+}
+/* 网格抖动 */
+.play .p5-bg-grid {
+	opacity: 0;
+	-webkit-animation: shake-bg .1s linear 1s infinite alternate;
+}
+@keyframes shake-bg {
+	0% {
+		top: 0px;
+		opacity: 1;
+		right: -1;
+	}
+	100% {
+		top: 2px;
+		opacity: 1;
+		right: 1;
+	}
 }
 </style>

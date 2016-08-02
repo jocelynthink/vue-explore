@@ -1,24 +1,124 @@
 <template>
 	<div class="loading">
-    <div class="bg">        
-		<div class="circle_process">
-			<div class="wrapper right">
-				<div class="circle rightcircle" id="rightcircle"></div>
-			</div>
-			<div class="wrapper left">
-				<dic class="circle leftcircle" id="leftcircle"></dic>
-			</div>
-		</div>
-		<div class="percent">
-			<span v-text="percent"></span>
-		</div>
-    </div>
+        <div class="bg">        
+    		<div class="circle_process">
+    			<div class="wrapper right">
+    				<div class="circle rightcircle" id="rightcircle"></div>
+    			</div>
+    			<div class="wrapper left">
+    				<dic class="circle leftcircle" id="leftcircle"></dic>
+    			</div>
+    		</div>
+    		<div class="percent">
+    			<span v-text="percent"></span>
+    		</div>
+        </div>
+        <div class="loading-title1"></div>
+        <div class="loading-title2"></div>
 	</div>
 </template>
 
 <script>
-import loading from "../assets/images/loading.png"
-import p1_bg from "../assets/images/p1_bg.png"
+import loading from '../assets/images/loading.png';
+import loading_title1 from '../assets/images/loading_title1.png';
+import loading_title2 from '../assets/images/loading_title2.png';
+import music_icon from '../assets/images/music_icon.png';
+import p1_bg from '../assets/images/p1_bg.png';
+import p1_circle from '../assets/images/p1_circle.png';
+import p1_desc from '../assets/images/p1_desc.png';
+import p1_desc_bottom from '../assets/images/p1_desc_bottom.png';
+import p1_desc_dress_bottom from '../assets/images/p1_desc_dress_bottom.png';
+import p1_desc_dress_top from '../assets/images/p1_desc_dress_top.png';
+import p1_desc_top from '../assets/images/p1_desc_top.png';
+import p1_light from '../assets/images/p1_light.png';
+import p1_line from '../assets/images/p1_line.png';
+import p1_logo from '../assets/images/p1_logo.png';
+import p1_logo_left from '../assets/images/p1_logo_left.png';
+import p1_logo_right from '../assets/images/p1_logo_right.png';
+import p1_next from '../assets/images/p1_next.png';
+import p1_title1 from '../assets/images/p1_title1.png';
+import p1_title2 from '../assets/images/p1_title2.png';
+import p2_1935 from '../assets/images/p2_1935.png';
+import p2_1935_text from '../assets/images/p2_1935_text.png';
+import p2_2016 from '../assets/images/p2_2016.png';
+import p2_2016_text from '../assets/images/p2_2016_text.png';
+import p2_bg_left from '../assets/images/p2_bg_left.png';
+import p2_bg_left_grid from '../assets/images/p2_bg_left_grid.png';
+import p2_bg_right from '../assets/images/p2_bg_right.png';
+import p2_bg_right_grid from '../assets/images/p2_bg_right_grid.png';
+import p2_bottom from '../assets/images/p2_bottom.png';
+import p2_light from '../assets/images/p2_light.png';
+import p2_people from '../assets/images/p2_people.png';
+import p2_progress from '../assets/images/p2_progress.png';
+import p2_text from '../assets/images/p2_text.png';
+import p2_time_base from '../assets/images/p2_time_base.png';
+import p2_top from '../assets/images/p2_top.png';
+import p2_top_bg from '../assets/images/p2_top_bg.png';
+import p2_top_dress from '../assets/images/p2_top_dress.png';
+import p2_top_dress2 from '../assets/images/p2_top_dress2.png';
+import p2_up_text from '../assets/images/p2_up_text.png';
+import p3_1968 from '../assets/images/p3_1968.png';
+import p3_1968_text from '../assets/images/p3_1968_text.png';
+import p3_2016 from '../assets/images/p3_2016.png';
+import p3_2016_text from '../assets/images/p3_2016_text.png';
+import p3_bg_left from '../assets/images/p3_bg_left.png';
+import p3_bg_left_grid from '../assets/images/p3_bg_left_grid.png';
+import p3_bg_right from '../assets/images/p3_bg_right.png';
+import p3_bg_right_grid from '../assets/images/p3_bg_right_grid.png';
+import p3_text from '../assets/images/p3_text.png';
+import p4_1951 from '../assets/images/p4_1951.png';
+import p4_1951_text from '../assets/images/p4_1951_text.png';
+import p4_2016 from '../assets/images/p4_2016.png';
+import p4_2016_text from '../assets/images/p4_2016_text.png';
+import p4_bg_grid from '../assets/images/p4_bg_grid.png';
+import p4_bg_left from '../assets/images/p4_bg_left.png';
+import p4_bg_right from '../assets/images/p4_bg_right.png';
+import p4_people from '../assets/images/p4_people.png';
+import p4_people_left from '../assets/images/p4_people_left.png';
+import p4_people_right from '../assets/images/p4_people_right.png';
+import p4_text1 from '../assets/images/p4_text1.png';
+import p4_text2 from '../assets/images/p4_text2.png';
+import p4_top from '../assets/images/p4_top.png';
+import p5_bottom from '../assets/images/p5_bottom.png';
+import p5_qq from '../assets/images/p5_qq.png';
+import p5_qq_bottom from '../assets/images/p5_qq_bottom.png';
+import p5_qq_light from '../assets/images/p5_qq_light.png';
+import p5_title from '../assets/images/p5_title.png';
+import p5_top from '../assets/images/p5_top.png';
+import p6_bottom from '../assets/images/p6_bottom.png';
+import p6_circle1 from '../assets/images/p6_circle1.png';
+import p6_circle1_1 from '../assets/images/p6_circle1_1.png';
+import p6_circle2 from '../assets/images/p6_circle2.png';
+import p6_circle2_1 from '../assets/images/p6_circle2_1.png';
+import p6_circle3 from '../assets/images/p6_circle3.png';
+import p6_circle3_1 from '../assets/images/p6_circle3_1.png';
+import p6_circle4 from '../assets/images/p6_circle4.png';
+import p6_circle4_1 from '../assets/images/p6_circle4_1.png';
+import p6_circle5 from '../assets/images/p6_circle5.png';
+import p6_circle5_1 from '../assets/images/p6_circle5_1.png';
+import p6_circle6 from '../assets/images/p6_circle6.png';
+import p6_circle6_1 from '../assets/images/p6_circle6_1.png';
+import p6_dress_circle1 from '../assets/images/p6_dress_circle1.png';
+import p6_dress_circle2 from '../assets/images/p6_dress_circle2.png';
+import p6_line1 from '../assets/images/p6_line1.png';
+import p6_line2 from '../assets/images/p6_line2.png';
+import p6_line3 from '../assets/images/p6_line3.png';
+import p6_line4 from '../assets/images/p6_line4.png';
+import p6_line5 from '../assets/images/p6_line5.png';
+import p6_text from '../assets/images/p6_text.png';
+import p6_title from '../assets/images/p6_title.png';
+import p6_title_left from '../assets/images/p6_title_left.png';
+import p6_title_right from '../assets/images/p6_title_right.png';
+import p7_bg from '../assets/images/p7_bg.png';
+import p7_bottom from '../assets/images/p7_bottom.png';
+import p7_button from '../assets/images/p7_button.png';
+import p7_grid from '../assets/images/p7_grid.png';
+import p7_light from '../assets/images/p7_light.png';
+import p7_logo from '../assets/images/p7_logo.png';
+import p7_text from '../assets/images/p7_text.png';
+import p7_title from '../assets/images/p7_title.png';
+import p7_top from '../assets/images/p7_top.png';
+import paint from '../assets/images/paint.jpg';
 
 export default {
     data () {
@@ -101,14 +201,105 @@ export default {
         window._pandaImageLoaded = false;
         var pics = [
             loading,
-            'http://d.ifengimg.com/mw978_mh598/p3.ifengimg.com/a/2016_31/20e4745e2fe9334_size113_w962_h641.jpg',
+            loading_title1,
+            loading_title2,
+            music_icon,
             p1_bg,
-            'http://d.ifengimg.com/mw978_mh598/p2.ifengimg.com/a/2016_31/e7381041f8b11e9_size103_w962_h642.jpg',
-            p1_bg,
-            p1_bg,
-            p1_bg,
-            p1_bg,
-            'http://d.ifengimg.com/mw978_mh598/p2.ifengimg.com/a/2016_31/694309d2c5802ad_size126_w962_h608.jpg'
+            p1_circle,
+            p1_desc,
+            p1_desc_bottom,
+            p1_desc_dress_bottom,
+            p1_desc_dress_top,
+            p1_desc_top,
+            p1_light,
+            p1_line,
+            p1_logo,
+            p1_logo_left,
+            p1_logo_right,
+            p1_next,
+            p1_title1,
+            p1_title2,
+            p2_1935,
+            p2_1935_text,
+            p2_2016,
+            p2_2016_text,
+            p2_bg_left,
+            p2_bg_left_grid,
+            p2_bg_right,
+            p2_bg_right_grid,
+            p2_bottom,
+            p2_light,
+            p2_people,
+            p2_progress,
+            p2_text,
+            p2_time_base,
+            p2_top,
+            p2_top_bg,
+            p2_top_dress,
+            p2_top_dress2,
+            p2_up_text,
+            p3_1968,
+            p3_1968_text,
+            p3_2016,
+            p3_2016_text,
+            p3_bg_left,
+            p3_bg_left_grid,
+            p3_bg_right,
+            p3_bg_right_grid,
+            p3_text,
+            p4_1951,
+            p4_1951_text,
+            p4_2016,
+            p4_2016_text,
+            p4_bg_grid,
+            p4_bg_left,
+            p4_bg_right,
+            p4_people,
+            p4_people_left,
+            p4_people_right,
+            p4_text1,
+            p4_text2,
+            p4_top,
+            p5_bottom,
+            p5_qq,
+            p5_qq_bottom,
+            p5_qq_light,
+            p5_title,
+            p5_top,
+            p6_bottom,
+            p6_circle1,
+            p6_circle1_1,
+            p6_circle2,
+            p6_circle2_1,
+            p6_circle3,
+            p6_circle3_1,
+            p6_circle4,
+            p6_circle4_1,
+            p6_circle5,
+            p6_circle5_1,
+            p6_circle6,
+            p6_circle6_1,
+            p6_dress_circle1,
+            p6_dress_circle2,
+            p6_line1,
+            p6_line2,
+            p6_line3,
+            p6_line4,
+            p6_line5,
+            p6_text,
+            p6_title,
+            p6_title_left,
+            p6_title_right,
+            p7_bg,
+            p7_bottom,
+            p7_button,
+            p7_grid,
+            p7_light,
+            p7_logo,
+            p7_text,
+            p7_title,
+            p7_top,
+            paint,
         ];
         this._loadImages(pics,function(){
             console.log('消失');
@@ -211,7 +402,41 @@ export default {
     line-height: 50px;
     font-size: 26px;
 }
-
+.loading-title1 {
+    background-image: url(../assets/images/loading_title1.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 70.5px;
+    height: 17px;
+    left: 50%;
+    margin-left: -35.25px;
+    top: 330px;
+}
+.loading-title2 {
+    background-image: url(../assets/images/loading_title2.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 263.5px;
+    height: 24.5px;
+    left: 52px;
+    top: 365.15px;
+}
+/*.bg {
+   opacity: 0;
+   -webkit-animation: rotate-circle 3s linear 1s infinite;
+}
+@keyframes rotate-circle {
+    0% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform:  rotate(360deg);
+    }
+}*/
 </style>
 
 

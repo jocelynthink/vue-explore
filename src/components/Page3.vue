@@ -1,5 +1,5 @@
 <template>
-	<div class="page2" v-bind:class="{'play':current===3}">
+	<div class="page3" v-bind:class="{'play':current===3}">
 		<div class="p3-bg-left"></div>
 		<div class="p3-bg-right"></div>
 		<div class="p3-bg-left-grid"></div>
@@ -18,9 +18,9 @@
 			<div class="p3-time-base"></div>
 			<div class="p3-time-point"></div>
 			<div class="p3-time-line"></div>
-			<div class="p3-1935"></div>
+			<div class="p3-1968"></div>
 			<div class="p3-2016"></div>
-			<div class="p3-1935-text"></div>c
+			<div class="p3-1968-text"></div>c
 			<div class="p3-2016-text"></div>
 			<div class="p3-left-circle1 circle"></div>
 			<div class="p3-left-circle2 circle"></div>
@@ -55,7 +55,7 @@ export default {
 		return {
 		 isanimation: false,
 		 items: [
-		 		1935,
+		 		1968,
 	 			1938,	
 				1960,	
 				1965,	
@@ -187,7 +187,7 @@ export default {
 	background: rgba(255,255,255,.5);
 	box-shadow: 0px 0px 5px #FFFFFF;
 	width: 1px;
-	height: 456px;
+	height: 480px;
 	position: absolute;
 	left: 18px;
 	margin-top: 15px;
@@ -210,34 +210,34 @@ export default {
 	font-weight: 700;
 }
 
-.p3-desc .p3-1935{
+.p3-desc .p3-1968{
 	background-image: url(../assets/images/p3_1968.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 39px;
-	height: 12px;
-	top: 438.5px;
-	left: 14px;
+	width: 56px;
+	height: 17.5px;
+	top: 456px;
+	left: 24px;
 }
 .p3-desc .p3-2016 {
 	background-image: url(../assets/images/p3_2016.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width:40px;
-	height: 12.5px;
-	top: 438.5px;
-	right: 14px;
+	width: 58px;
+	height: 17.5px;
+	top: 456px;
+	right: 20px;
 }
 .p3-desc .p3-time-base {
 	background-image: url(../assets/images/p2_time_base.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 327.5px;
+	width: 329.5px;
 	height: 24px;
-	top: 459.5px;
+	top: 482.5px;
 	right: 14px;
 	left: 50%;
 	margin-left: -163.75px;
@@ -249,7 +249,7 @@ export default {
 	position: absolute;
 	width: 31.5px;
 	height: 14.4px;
-	top: 465px;
+	top: 488px;
 	left: 94px;
 }
 .p3-desc .p3-time-line {
@@ -259,28 +259,28 @@ export default {
 	position: absolute;
 	width: 90px;
 	height: 1px;
-	top: 471.5px;
+	top: 494.5px;
 	left: 23px;
 }
-.p3-desc .p3-1935-text {
+.p3-desc .p3-1968-text {
 	background-image: url(../assets/images/p3_1968_text.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 109px;
-	height: 25.5px;
-	top: 493.5px;
-	left: 14px;
+	width: 111px;
+	height: 29px;
+	top: 514.5px;
+	left: 24px;
 }
 .p3-desc .p3-2016-text {
 	background-image: url(../assets/images/p3_2016_text.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 68.5px;
-	height: 25px;
-	top: 493.5px;
-	right: 14px;
+	width: 69px;
+	height: 26.5px;
+	top: 514.5px;
+	right: 20px;
 }
 .p3-desc .circle {
   background-image: url(../assets/images/p1_circle.png);
@@ -445,7 +445,7 @@ export default {
 	opacity: 0;
 	-webkit-animation: showIn .2s linear 1.8s forwards;
 }
-.play .p3-desc .p3-1935 {
+.play .p3-desc .p3-1968 {
 	opacity: 0;
 	-webkit-animation: showIn .2s linear 1.8s forwards;
 }
@@ -453,7 +453,7 @@ export default {
 	opacity: 0;
 	-webkit-animation: showIn .2s linear 1.8s forwards;
 }
-.play .p3-desc .p3-1935-text {
+.play .p3-desc .p3-1968-text {
 	opacity: 0;
 	-webkit-animation: showIn .2s linear 1.8s forwards;
 }
@@ -497,7 +497,7 @@ export default {
 		left: 18px;
 	}
 	100% {
-		left: 350px;
+		left: 356px;
 		opacity: 0;
 	}
 }

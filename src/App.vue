@@ -28,7 +28,7 @@ import Page6 from './components/Page6'
 import Page7 from './components/Page7'
 import Welcome from './components/Welcome'
 export default {
-  components: {
+  components: { 
     Page1,
     Page2,
     Page3,
@@ -90,6 +90,18 @@ export default {
           break;
         case 3:
           second = 4;
+          break;
+        case 4: 
+          second = 4.7;
+          break;
+        case 5: 
+          second = 2;
+          break;
+        case 6: 
+          second = 3.5;
+          break;
+        case 7: 
+          second = 1;
           break;
       }
 
@@ -217,13 +229,11 @@ body {
 .page5 {
   width: 100vw;
   height: 100vh;
-  background: red;
   position: relative;
 }
 .page6 {
   width: 100vw;
   height: 100vh;
-  background: pink;
   position: relative;
 }
 .page7 {
