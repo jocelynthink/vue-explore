@@ -6,6 +6,7 @@
   <div  id="srcolldiv" class="scroll-list"
         v-touch:swipeup="swipeup"
         v-touch:swipedown="swipedown"
+        :style="{'height':`${isAndroid ? '100vh' : count * 100 + '%'}`, 'marginTop':`${isAndroid ? '' : (-100*(current-1) + 'vh')}`}"
        v-if="!isLoading">
     <page1 :current.sync="current"></page1>
     <page2 :current.sync="current"></page2>
@@ -46,7 +47,8 @@ export default {
       count: 7,
       isLoading: true,
       preventSwipe: true,
-      height: document.body.clientHeight
+      height: document.body.clientHeight,
+      isAndroid: navigator.userAgent.indexOf('Android') > -1 || navigator.userAgent.indexOf('Adr') > -1
     }
   },
   methods: {
@@ -76,8 +78,12 @@ export default {
     },
     changePage(){
       var div = document.getElementById('srcolldiv');
-      var top = - ((this.current - 1) * this.height) + 'px';
-      div.style.WebkitTransform = 'translateY(' + top + ')';
+      if(this.isAndroid){
+        var top = - ((this.current - 1) * this.height) + 'px';
+        div.style.WebkitTransform = 'translateY(' + top + ')';
+      // }else{
+        // div.style.marginTop = -100*(this.current-1) + 'vh';
+      }
     },
     time (num)　{
       var second = 0;
@@ -120,6 +126,12 @@ export default {
       console.log('preventSwipe')
         this.preventSwipe = false;
     }
+  },
+  ready(){
+    // if(!this.isAndroid){
+    //   var div = document.getElementById('srcolldiv');
+    //   div.style.height = this.count * 100 + '%';
+    // }
   }
 }
 </script>

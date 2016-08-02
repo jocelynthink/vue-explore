@@ -484,11 +484,11 @@ export default {
 @keyframes rotate-circle {
 	0% {
 		opacity: 1;
-		transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
 	}
 	100% {
 		opacity: 1;
-		transform:  rotate(360deg);
+		-webkit-transform:  rotate(360deg);
 	}
 }
 .play .p6-line1 {

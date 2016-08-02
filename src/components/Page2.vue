@@ -190,7 +190,7 @@ export default {
 	width: 1px;
 	height: 480px;
 	position: absolute;
-	left: 18px;
+	left: 356px;
 	margin-top: 15px;
 	z-index: 110;
 }
@@ -251,14 +251,14 @@ export default {
 	width: 31.5px;
 	height: 14.4px;
 	top: 488px;
-	left: 94px;
+	left: 324px;
 }
 .p2-desc .p2-time-line {
 	background: #4F93FC;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 90px;
+	width: 320px;
 	height: 1px;
 	top: 494.5px;
 	left: 23px;

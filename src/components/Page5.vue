@@ -5,11 +5,11 @@
 			<div class="p5-desc-top"></div>
 			<div class="p5-desc-bottom"></div>
 			<div class="p5-desc-center">
-				<div class="p5-desc-center-penguin"></div>
-				<div class="p5-desc-center-penguin-light"></div>
-				<div class="p5-desc-center-penguin-bottom"></div>
-				<div class="p5-desc-center-penguin-left"></div>
-				<div class="p5-desc-center-penguin-right"></div>
+				<div class="p5-3d p5-desc-center-penguin"></div>
+				<div class="p5-3d p5-desc-center-penguin-light"></div>
+				<div class="p5-3d p5-desc-center-penguin-bottom"></div>
+				<div class="p5-3d p5-desc-center-penguin-left"></div>
+				<div class="p5-3d p5-desc-center-penguin-right"></div>
 			</div>
 			<div class="p5-desc-title"></div>
 			<div class="p5-line-left"></div>
@@ -88,6 +88,12 @@ export default {
 	width: 257px;
 	height: 314.5px;
 	margin-left: -128.5px;
+	-webkit-transform: translateZ(1000px);
+}
+.p5-desc .p5-3d{
+	-webkit-backface-visibility:hidden;
+	-webkit-transform-style: preserve-3d;
+	-webkit-perspective: 1000px;
 }
 .p5-desc .p5-desc-center-penguin {
 	background-image: url(../assets/images/p5_qq.png);
@@ -99,6 +105,7 @@ export default {
 	left: 50%;
 	top: 37px;
 	margin-left: -60.25px;
+	/*z-index: 100;*/
 }
 .p5-desc .p5-desc-center-penguin-light {
 	background-image: url(../assets/images/p5_qq_light.png);
@@ -110,6 +117,7 @@ export default {
 	left: 50%;
 	top: 0px;
 	margin-left: -85.25px;
+	z-index: 10000;
 }
 .p5-desc .p5-desc-center-penguin-bottom {
 	background-image: url(../assets/images/p5_qq_bottom.png);
@@ -282,11 +290,11 @@ export default {
  }
 .play .p5-desc-center-penguin {
 	opacity: 0;
-	-webkit-animation: showIn .5s linear 1.2s forwards;
+	-webkit-animation: showIn .5s linear 1.2s forwards , penguin-rotate 7.5s linear 1.5s infinite alternate;
 }
 .play .p5-desc-center-penguin-light {
 	opacity: 0;
-	-webkit-animation: showIn .5s linear 1.2s forwards;
+	-webkit-animation: showIn .5s linear 1.2s forwards, penguin-light 7.5s linear 1.5s infinite;
 }
 .play .p5-desc-center-penguin-bottom {
 	opacity: 0;
@@ -312,33 +320,36 @@ export default {
 	}
 }
 
-.play .p5-desc-center-penguin {
-	opacity: 0;
-	-webkit-animation: penguin-rotate 5s linear 1.5s infinite alternate;
-}
 @keyframes penguin-rotate {
 	0% {
-		opacity: 1;
-		transform: rotateY(-30deg);
+		
+		-webkit-transform: rotateY(0deg);
 	}
-	50% {
-		opacity: 1;
-		transform: rotateY(0deg);
+	33% {
+
+		-webkit-transform: rotateY(-30deg);
+	}
+	66% {
+
+		-webkit-transform: rotateY(0deg);
 	}
 	100% {
-		opacity: 1;
-		transform: rotateY(30deg);
+
+		-webkit-transform: rotateY(30deg);
 	}
 }
-.play .p5-desc-center-penguin-light {
-	opacity: 0;
-	-webkit-animation: penguin-light 5s linear 1.5s infinite;
-}
+
 @keyframes penguin-light {
 	0% {
 		opacity: 0;
 	}
-	50% {
+	3% {
+		opacity: 1;
+	}
+	33% {
+		opacity: 0;
+	}
+	66% {
 		opacity: 1;
 	}
 	100% {

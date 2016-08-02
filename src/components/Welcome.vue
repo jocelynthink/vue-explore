@@ -420,8 +420,9 @@ export default {
     position: absolute;
     width: 263.5px;
     height: 24.5px;
-    left: 52px;
+    left: 50%;
     top: 365.15px;
+    margin-left: -131.75px
 }
 /*.bg {
    opacity: 0;

@@ -144,6 +144,17 @@ export default {
 	right: 0px;
 	top: 46px;
 }
+.p4-desc .p4-desc-title {
+	background-image: url(../assets/images/p4_title.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 185px;
+	height: 25px;
+	left: 50%;
+	margin-left: -92.5px;
+	top: 309px;
+}
 .p4-desc .p4-desc-text1 {
 	background-image: url(../assets/images/p4_text1.png);
 	background-size: 100% 100%;
@@ -153,7 +164,7 @@ export default {
 	height: 11px;
 	left: 50%;
 	margin-left: -159px;
-	top: 368px;
+	top: 342px;
 }
 .p4-desc .p4-desc-text2 {
 	background-image: url(../assets/images/p4_text2.png);
@@ -164,7 +175,7 @@ export default {
 	height: 30px;
 	left: 50%;
 	margin-left: -70.5px;
-	top: 388px;
+	top: 371px;
 }
 /* 四角圆圈 */
 .p4-desc .circle {
@@ -220,9 +231,10 @@ export default {
 	width: 1px;
 	height: 480px;
 	position: absolute;
-	left: 23px;
+	left: 230px;
 	margin-top: 15px;
 	z-index: 110;
+	opacity: 0;
 }
 .p4-desc .p4-1951{
 	background-image: url(../assets/images/p4_1951.png);
@@ -264,14 +276,14 @@ export default {
 	width: 31.5px;
 	height: 14.4px;
 	top: 488px;
-	left: 94px;
+	left: 324px;
 }
 .p4-desc .p4-time-line {
 	background: #4F93FC;
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 90px;
+	width: 320px;
 	height: 1px;
 	top: 494.5px;
 	left: 23px;
