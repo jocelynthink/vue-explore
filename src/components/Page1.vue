@@ -21,6 +21,15 @@
       <div class="p1-desc-right-circle1 circle"></div>
       <div class="p1-desc-right-circle2 circle"></div>
     </div>
+    <div class="star star1"></div>
+    <div class="star star2"></div>
+    <div class="star star3"></div>
+    <div class="star star4"></div>
+    <div class="star star5"></div>
+    <div class="star star6"></div>
+    <div class="star star7"></div>
+    <div class="star star8"></div>
+    <div class="star star9"></div>
     <div  class="dir-next"></div>
   </div>
 </template>
@@ -213,6 +222,55 @@ export default {
   right: 8px;
   top: 41.5px;
 }
+
+.star {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  background-color: #2a30a1;
+  box-shadow: 0px 0px 1px #fff;
+  border-radius: 50%;
+}
+.star1 {
+  top: 165px;
+  left: 271px;
+}
+.star2 {
+  top: 240px;
+  left: 61px;
+}
+.star3 {
+  top: 350px;
+  left: 290px;
+}
+.star4 {
+  top: 401px;
+  left: 18px;
+}
+.star5 {
+  top: 500px;
+  left: 80px;
+}
+.star6 {
+  bottom: 114px;
+  right: 40px;
+}
+.star7 {
+  bottom: 124px;
+  right: 150px;
+}
+.star8 {
+  top: 275px;
+  left: 200px;
+}
+.star9 {
+  top: 60px;
+  left: 50px;
+}
+.play .star {
+  opacity: 0;
+  -webkit-animation: showIn .5s linear .5s infinite alternate;
+}
 .play .p1-logo {
   opacity: 0;
   -webkit-animation: showIn .5s linear .5s forwards;
@@ -372,7 +430,7 @@ export default {
 
 .play .p1-desc .p1-desc-light {
   opacity: 0;
-  -webkit-animation: light-show .5s linear 1.5s forwards;
+  -webkit-animation: light-show .5s linear 1.5s forwards, light-shake 2s linear alternate  infinite;
 }
 @keyframes light-show {
   0% {
@@ -382,6 +440,14 @@ export default {
   100% {
     opacity: 1;
     left: 160px;
+  }
+}
+@keyframes light-shake {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 .page1 .dir-next {
@@ -437,6 +503,9 @@ export default {
 
 @media only screen
 and (max-device-width : 320px){
+.dir-next {
+  bottom: -5px;
+ }
   .p1-top {
     width: 180px;
     margin-left: -90px;

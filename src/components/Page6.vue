@@ -345,7 +345,7 @@ export default {
 	position: absolute;
 	width: 1px;
 	height: 276px;
-	left: 8px;
+	left: 5px;
 	top: 50px;
 	z-index: 10;
 }
@@ -459,27 +459,27 @@ export default {
 /*圆圈转动*/
 .play .p6-circle1_1 {
 	opacity: 0;
-	-webkit-animation: rotate-circle 3s linear 1s infinite;
+	-webkit-animation: rotate-circle 3s linear 2s infinite;
 }
 .play .p6-circle2_1 {
 	opacity: 0;
-	-webkit-animation: rotate-circle 3s linear 1s infinite;
+	-webkit-animation: rotate-circle 3s linear 2s infinite;
 }
 .play .p6-circle3_1 {
 	opacity: 0;
-	-webkit-animation: rotate-circle 3s linear 1s infinite;
+	-webkit-animation: rotate-circle 3s linear 2s infinite;
 }
 .play .p6-circle4_1 {
 	opacity: 0;
-	-webkit-animation: rotate-circle 3s linear 1s infinite;
+	-webkit-animation: rotate-circle 3s linear 2s infinite;
 }
 .play .p6-circle5_1 {
 	opacity: 0;
-	-webkit-animation: rotate-circle 3s linear 1s infinite;
+	-webkit-animation: rotate-circle 3s linear 2s infinite;
 }
 .play .p6-circle6_1 {
 	opacity: 0;
-	-webkit-animation: rotate-circle 3s linear 1s infinite;
+	-webkit-animation: rotate-circle 3s linear 2s infinite;
 }
 @keyframes rotate-circle {
 	0% {
@@ -493,7 +493,7 @@ export default {
 }
 .play .p6-line1 {
 	opacity: 0;
-	-webkit-animation: show-line-1 .5s linear 1s forwards;
+	-webkit-animation: show-line-1 .5s linear 2s forwards;
 }
 @keyframes show-line-1 {
 	0% {
@@ -509,7 +509,7 @@ export default {
 }
 .play .p6-line2 {
 	opacity: 0;
-	-webkit-animation: show-line-2 .5s linear 1.5s forwards;
+	-webkit-animation: show-line-2 .5s linear 2.5s forwards;
 }
 @keyframes show-line-2 {
 	0% {
@@ -527,7 +527,7 @@ export default {
 }
 .play .p6-line3 {
 	opacity: 0;
-	-webkit-animation: show-line-3 .5s linear 2s forwards;
+	-webkit-animation: show-line-3 .5s linear 3s forwards;
 }
 @keyframes show-line-3 {
 	0% {
@@ -543,7 +543,7 @@ export default {
 }
 .play .p6-line4 {
 	opacity: 0;
-	-webkit-animation: show-line-4 .5s linear 2.5s forwards;
+	-webkit-animation: show-line-4 .5s linear 3.5s forwards;
 }
 @keyframes show-line-4 {
 	0% {
@@ -561,7 +561,7 @@ export default {
 }
 .play .p6-line5 {
 	opacity: 0;
-	-webkit-animation: show-line-5 .5s linear 3s forwards;
+	-webkit-animation: show-line-5 .5s linear 4s forwards;
 }
 @keyframes show-line-5 {
 	0% {
@@ -617,5 +617,36 @@ export default {
 		right: 1;
 	}
 }
-
+@media only screen
+ and (max-device-width : 320px){
+ .dir-next {
+ 	bottom: -5px;
+ }
+ .p6-desc {
+ 	top: 4px;
+ 	width: 320px;
+ 	height: 450px;
+ 	margin-left: -160px;
+ }
+ .p6-desc .p6-desc-top{
+ 	width: 308px;
+ 	margin-left: -154px;
+ }
+ .p6-desc .p6-desc-bottom{
+ 	width: 308px;
+ 	margin-left: -154px;
+ }
+ .p6-desc .p6-desc-center {
+ 	width: 288px;
+    margin-left: -144px
+ }
+.p6-desc .p6-circle {
+	position: relative;
+    left: -24px
+ }
+ .p6-desc .p6-line {
+ 	position: relative;
+ 	left: -24px;
+ }
+}
 </style>

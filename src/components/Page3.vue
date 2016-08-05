@@ -9,10 +9,10 @@
 			<div class="p3-bottom"></div>
 			<ul class="p3-time" id="p3-time">
 				<li v-for="item of items">
-					<span :style="{opacity: 1 - $index/10}">{{item}}</span>
+					<img v-bind:src="item" alt="" :style="{opacity: 1 - $index/10}">
 				</li>
 			</ul>
-			<div class="p3-light"></div>
+			<!-- <div class="p3-light"></div> -->
 			<div class="p3-line-left"></div>
 			<div class="p3-line-right"></div>
 			<div class="p3-time-base"></div>
@@ -29,6 +29,7 @@
 			<div class="p3-up-text"></div>
 			<div class="p3-up-people"></div>
 		</div>
+		<div class="p3-mask"></div>
 		<div class="dir-next"></div>
 <!--     <div class="p3-bg"></div>
   	<div class="p3-text">
@@ -45,6 +46,12 @@
 </template>
 
 <script>
+import date1 from '../assets/images/p3_s1936.png'
+import date2 from '../assets/images/p3_s1948.png'
+import date3 from '../assets/images/p3_s1956.png'
+import date4 from '../assets/images/p3_s1968.png'
+import date5 from '../assets/images/p3_s1982.png'
+import date6 from '../assets/images/p3_s2016.png'
 export default {
 	props: {
 		current: {
@@ -55,12 +62,12 @@ export default {
 		return {
 		 isanimation: false,
 		 items: [
-		 		1968,
-	 			1938,	
-				1960,	
-				1965,	
-				1987,	
-				2016,	
+		 		date1,
+	 			date2,	
+				date3,	
+				date4,	
+				date5,	
+				date6
 		 	]
 		}
 	},
@@ -137,7 +144,8 @@ export default {
 	top: 8px;
 	left: 50%;
 	margin-left: -186.25px;
-	background: rgba(0,8,22,0.4);
+	/*background: rgba(0,8,22,0.4);*/
+	z-index: 10;
 }
 .p3-desc .p3-top {
 	background-image: url(../assets/images/p2_top.png);
@@ -168,7 +176,7 @@ export default {
 	position: absolute;
 	width: 1px;
 	height: 276px;
-	left: 8px;
+	left: 5px;
 	top: 50px;
 	z-index: 10;
 }
@@ -195,19 +203,19 @@ export default {
 }
 .p3-desc .p3-time{
 	position: absolute;
-	top: 18px;
-	left: 10px;
-	width: 25px;
-	height: 74px;
-	line-height: 10px;
+	top: 23px;
+	left: 16px;
+	width: 13px;
+	height: 49px;
 }
-.p3-desc .p3-time span{
-	color: #468FB8;
-	/*color: #fff;*/
-	/*-webkit-text-size-adjust:none;*/
-	font-size: 10px;
-	/*text-shadow:0 0 5px #468FB8;*/
-	font-weight: 700;
+.p3-desc .p3-time li {
+	margin-bottom: 4px;
+	height: 5.5px;
+}
+.p3-desc .p3-time img{
+	width: 13px;
+	height: 5.5px;
+	background-size: 100% 100%;
 }
 
 .p3-desc .p3-1968{
@@ -324,9 +332,9 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	left: 68px;
+	left: 28px;
 	top: 82px;
-	width: 207px;
+	width: 307px;
 	height: 300px;
 	z-index: 50;
 }
@@ -341,6 +349,30 @@ export default {
 	height: 363px;
 	margin-left: -35.25px;
 	z-index: 100;
+}
+.p3-mask {
+	background-image: url(../assets/images/mask.png);
+	background-size: 800px 603px;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-position: -425px;
+}
+
+.play .p3-mask {
+	opacity: 0;
+	-webkit-animation: show-mask 2s linear 1.8s forwards;
+}
+@keyframes show-mask {
+	0% {
+		opacity: 1;
+		background-position-x: -425px;
+	}
+	100% {
+		opacity: 1;
+		background-position-x: 0px;
+	}
 }
 
 /*拉开*/
@@ -487,7 +519,7 @@ export default {
 	   opacity: 1;
 	}
 }
-.play .p3-desc .p3-light {
+/*.play .p3-desc .p3-light {
 	opacity: 0;
 	-webkit-animation: time-show 2s linear 1.8s forwards;
 }
@@ -500,7 +532,7 @@ export default {
 		left: 356px;
 		opacity: 0;
 	}
-}
+}*/
 .play .p3-desc .p3-time-point {
 	opacity: 0;
 	-webkit-animation: point-show 2s linear 1.8s forwards;
@@ -544,5 +576,86 @@ export default {
 		opacity: 1;
 		background-position-x: -1295px;
 	}
+}
+
+@media only screen
+and (max-device-width : 320px){
+.dir-next {
+ 	bottom: -5px;
+ }
+.p3-desc {
+	top: 4px;
+	width: 320px;
+	height: 540px;
+	margin-left: -160px;
+}
+.p3-desc .p3-top{
+	width: 315px;
+	margin-left: -157px;
+}
+.p3-desc .p3-bottom{
+	width: 315px;
+	margin-left: -154px;
+}
+.p3-desc .p3-1968 {
+	top: 431px;
+}
+.p3-desc .p3-2016 {
+	top: 431px;
+}
+.p3-desc .p3-1968-text {
+	top: 486.5px;
+}
+.p3-desc .p3-2016-text {
+	top: 486.5px;
+}
+.p3-desc .p3-time-base{
+	width: 276px;
+	margin-left: -138px;
+	top: 456.5px;
+}
+.p3-desc .p3-time-point{
+	top: 463px;
+	left: 270px;
+}
+.p3-desc .p3-time-line {
+	width: 267px;
+	top: 470px;
+}
+.p3-desc .p3-up-text {
+	left: 13px;
+}
+.p3-desc .p3-up-people {
+	left: 129px;
+}
+.play .p3-desc .p3-time-point {
+	opacity: 0;
+	-webkit-animation: point-show1 1.7s linear 1.8s forwards;
+}
+@keyframes point-show1 {
+	0% {
+		opacity: 1;
+		left: 0px;
+	}
+	100% {
+		opacity: 1;
+		left: 270px;
+	}
+}
+.play .p3-desc .p3-time-line {
+	opacity: 0;
+	-webkit-animation: line-show1 1.7s linear 1.8s forwards;
+}
+@keyframes line-show1 {
+	0% {
+		opacity: 1;
+		width: 0px;
+	}
+	100% {
+		opacity: 1;
+		width: 267px;
+	}
+}
+
 }
 </style>

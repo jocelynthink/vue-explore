@@ -397,10 +397,11 @@ export default {
     height: 50px;
 }
 .percent span {
-    color: #fff;
+    color: #52B1ED;
+    font-weight: 900;
     text-align: center;
     line-height: 50px;
-    font-size: 26px;
+    font-size: 24px;
 }
 .loading-title1 {
     background-image: url(../assets/images/loading_title1.png);

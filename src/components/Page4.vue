@@ -14,7 +14,7 @@
 			<div class="p4-desc-title"></div>
 			<div class="p4-desc-text1"></div>
 			<div class="p4-desc-text2"></div>
-			<div class="p4-light"></div>
+			<!-- <div class="p4-light"></div> -->
 			<div class="p4-line-left"></div>
 			<div class="p4-line-right"></div>
 			<div class="p4-time-base"></div>
@@ -29,6 +29,7 @@
 			<div class="p4-right-circle1 circle"></div>
 			<div class="p4-right-circle2 circle"></div>
 		</div>
+		<div class="p4-mask"></div>
 		<div class="dir-next"></div>
 	</div>
 </template>
@@ -81,7 +82,8 @@ export default {
 	top: 8px;
 	left: 50%;
 	margin-left: -186.25px;
-	background: rgba(0,8,22,0.4);
+	/*background: rgba(0,8,22,0.4);*/
+	z-index: 10;
 }
 .p4-desc .p4-desc-top {
 	background-image: url(../assets/images/p4_top.png);
@@ -210,7 +212,7 @@ export default {
 	position: absolute;
 	width: 1px;
 	height: 276px;
-	left: 8px;
+	left: 5px;
 	top: 50px;
 	z-index: 10;
 }
@@ -298,6 +300,16 @@ export default {
 	top: 514.5px;
 	left: 24px;
 }
+.p4-mask {
+	background-image: url(../assets/images/mask.png);
+	background-size: 800px 603px;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-position: -425px;
+}
+
 .p4-desc .p4-2016-text {
 	background-image: url(../assets/images/p4_2016_text.png);
 	background-size: 100% 100%;
@@ -308,6 +320,22 @@ export default {
 	top: 514.5px;
 	right: 20px;
 }
+
+.play .p4-mask {
+	opacity: 0;
+	-webkit-animation: show-mask 2s linear 2.3s forwards;
+}
+@keyframes show-mask {
+	0% {
+		opacity: 1;
+		background-position-x: -425px;
+	}
+	100% {
+		opacity: 1;
+		background-position-x: 0px;
+	}
+}
+
 
 /*拉开动画*/
 .play .p4-desc .p4-desc-top {
@@ -418,7 +446,7 @@ export default {
 	}
 }
  /*时间轴滑动*/
- .play .p4-desc .p4-light {
+/* .play .p4-desc .p4-light {
  	opacity: 0;
  	-webkit-animation: time-show 2s linear 2.3s forwards;
  }
@@ -431,7 +459,7 @@ export default {
  		left: 356px;
  		opacity: 0;
  	}
- }
+ }*/
  .play .p4-desc .p4-time-point {
  	opacity: 0;
  	-webkit-animation: point-show 2s linear 2.3s forwards;
@@ -539,4 +567,101 @@ export default {
  		right: 1;
  	}
  }
+
+ @media only screen
+ and (max-device-width : 320px){
+ .dir-next {
+ 	bottom: -5px;
+ }
+ .p4-desc {
+ 	top: 4px;
+ 	width: 320px;
+ 	height: 540px;
+ 	margin-left: -160px;
+ }
+ .p4-desc .p4-desc-top{
+ 	width: 308px;
+ 	margin-left: -154px;
+ }
+ .p4-desc .p4-desc-bottom{
+ 	width: 308px;
+ 	margin-left: -154px;
+ }
+ .p4-desc .p4-1951 {
+ 	top: 431px;
+ }
+ .p4-desc .p4-2016 {
+ 	top: 431px;
+ }
+ .p4-desc .p4-1951-text {
+ 	top: 486.5px;
+ }
+ .p4-desc .p4-2016-text {
+ 	top: 486.5px;
+ }
+ .p4-desc .p4-time-base{
+ 	width: 276px;
+ 	margin-left: -138px;
+ 	top: 456.5px;
+ }
+ .p4-desc .p4-time-point{
+ 	top: 463px;
+ 	left: 270px;
+ }
+ .p4-desc .p4-time-line {
+ 	width: 267px;
+ 	top: 470px;
+ }
+ .p4-desc .p4-up-text {
+ 	left: 13px;
+ }
+ .p4-desc .p4-up-people {
+ 	left: 129px;
+ }
+ .play .p4-desc .p4-time-point {
+ 	opacity: 0;
+ 	-webkit-animation: point-show1 1.7s linear 2.3s forwards;
+ }
+ @keyframes point-show1 {
+ 	0% {
+ 		opacity: 1;
+ 		left: 0px;
+ 	}
+ 	100% {
+ 		opacity: 1;
+ 		left: 270px;
+ 	}
+ }
+ .play .p4-desc .p4-time-line {
+ 	opacity: 0;
+ 	-webkit-animation: line-show1 1.7s linear 2.3s forwards;
+ }
+ @keyframes line-show1 {
+ 	0% {
+ 		opacity: 1;
+ 		width: 0px;
+ 	}
+ 	100% {
+ 		opacity: 1;
+ 		width: 267px;
+ 	}
+ }
+.p4-desc .p4-desc-people-eara {
+	top: 46px;
+	width: 240px;
+	margin-left: -120px;
+ }
+ .p4-desc .p4-left-circle1 {
+ 	top: 94px;
+ }
+ .p4-desc .p4-left-circle2 {
+ 	top: 118px;
+ }
+ .p4-desc .p4-right-circle1 {
+ 	top: 258px;
+ }
+ .p4-desc .p4-right-circle2 {
+ 	top: 282px;
+ }
+}
 </style>

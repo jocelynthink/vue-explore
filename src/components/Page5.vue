@@ -53,7 +53,7 @@ export default {
 .p5-desc {
 	position: absolute;
 	width: 372.5px;
-	height: 411px;
+	height: 490px;
 	top: 8px;
 	left: 50%;
 	margin-left: -186.25px;
@@ -115,7 +115,7 @@ export default {
 	width: 175.5px;
 	height: 78.5px;
 	left: 50%;
-	top: 0px;
+	top: -7px;
 	margin-left: -85.25px;
 	z-index: 10000;
 }
@@ -158,7 +158,7 @@ export default {
 	width: 177px;
 	height: 68px;
 	left: 50%;
-	top: 377px;
+	top: 454px;
 	margin-left: -88.5px;
 }
 .p5-desc .p5-line-left {
@@ -168,7 +168,7 @@ export default {
 	position: absolute;
 	width: 1px;
 	height: 276px;
-	left: 8px;
+	left: 5px;
 	top: 50px;
 	z-index: 10;
 }
@@ -290,11 +290,11 @@ export default {
  }
 .play .p5-desc-center-penguin {
 	opacity: 0;
-	-webkit-animation: showIn .5s linear 1.2s forwards , penguin-rotate 7.5s linear 1.5s infinite alternate;
+	-webkit-animation: showIn .5s linear 1.2s forwards , penguin-rotate 5s linear 1.5s infinite alternate;
 }
 .play .p5-desc-center-penguin-light {
 	opacity: 0;
-	-webkit-animation: showIn .5s linear 1.2s forwards, penguin-light 7.5s linear 1.5s infinite;
+	-webkit-animation: showIn .5s linear 1.2s forwards, penguin-light 5s linear 1.5s infinite;
 }
 .play .p5-desc-center-penguin-bottom {
 	opacity: 0;
@@ -377,4 +377,44 @@ export default {
 		right: 1;
 	}
 }
+@media only screen
+ and (max-device-width : 320px){
+ .dir-next {
+ 	bottom: -5px;
+ }
+ .p5-desc {
+ 	top: 4px;
+ 	width: 320px;
+ 	height: 450px;
+ 	margin-left: -160px;
+ }
+ .p5-desc .p5-desc-top{
+ 	width: 308px;
+ 	margin-left: -154px;
+ }
+ .p5-desc .p5-desc-bottom{
+ 	width: 308px;
+ 	margin-left: -154px;
+ }
+ .p5-desc .p5-desc-center {
+	top: 90px;
+	width: 240px;
+	margin-left: -120px;
+ }
+ .p5-desc .p5-left-circle1 {
+ 	top: 94px;
+ }
+ .p5-desc .p5-left-circle2 {
+ 	top: 118px;
+ }
+ .p5-desc .p5-right-circle1 {
+ 	top: 258px;
+ }
+ .p5-desc .p5-right-circle2 {
+ 	top: 282px;
+ }
+ .p5-desc .p5-desc-title{
+ 	top: 414px;
+ }
+ }
 </style>

@@ -10,10 +10,10 @@
 			<div class="p2-bottom"></div>
 			<ul class="p2-time" id="p2-time">
 				<li v-for="item of items">
-					<span :style="{opacity: 1 - $index/10}">{{item}}</span>
+					<img v-bind:src="item" alt="" :style="{opacity: 1 - $index/10}">
 				</li>
 			</ul>
-			<div class="p2-light"></div>
+			<!-- <div class="p2-light"></div> -->
 			<div class="p2-line-left"></div>
 			<div class="p2-line-right"></div>
 			<div class="p2-time-base"></div>
@@ -30,6 +30,7 @@
 			<div class="p2-up-text"></div>
 			<div class="p2-up-people"></div>
 		</div>
+		<div class="p2-mask"></div>
 		<div class="dir-next"></div>
 <!--     <div class="p2-bg"></div>
   	<div class="p2-text">
@@ -46,6 +47,12 @@
 </template>
 
 <script>
+import date1 from '../assets/images/p2_s1935.png'
+import date2 from '../assets/images/p2_s1938.png'
+import date3 from '../assets/images/p2_s1960.png'
+import date4 from '../assets/images/p2_s1965.png'
+import date5 from '../assets/images/p2_s1987.png'
+import date6 from '../assets/images/p2_s2016.png'
 export default {
 	props: {
 		current: {
@@ -56,12 +63,12 @@ export default {
 		return {
 		 isanimation: false,
 		 items: [
-		 		1935,
-	 			1938,	
-				1960,	
-				1965,	
-				1987,	
-				2016,	
+	 	 		date1,
+	  			date2,	
+	 			date3,	
+	 			date4,	
+	 			date5,	
+	 			date6
 		 	]
 		}
 	},
@@ -138,7 +145,8 @@ export default {
 	top: 8px;
 	left: 50%;
 	margin-left: -186.25px;
-	background: rgba(0,8,22,0.4);
+	/*background: rgba(0,8,22,0.4);*/
+	z-index: 10;
 }
 .p2-desc .p2-top {
 	background-image: url(../assets/images/p2_top.png);
@@ -169,7 +177,7 @@ export default {
 	position: absolute;
 	width: 1px;
 	height: 276px;
-	left: 8px;
+	left: 5px;
 	top: 50px;
 	z-index: 10;
 }
@@ -196,19 +204,19 @@ export default {
 }
 .p2-desc .p2-time{
 	position: absolute;
-	top: 18px;
-	left: 10px;
-	width: 25px;
-	height: 74px;
-	line-height: 10px;
+	top: 23px;
+	left: 16px;
+	width: 13px;
+	height: 49px;
 }
-.p2-desc .p2-time span{
-	color: #468FB8;
-	/*color: #fff;*/
-	/*-webkit-text-size-adjust:none;*/
-	font-size: 10px;
-	/*text-shadow:0 0 5px #468FB8;*/
-	font-weight: 700;
+.p2-desc .p2-time li {
+	margin-bottom: 4px;
+	height: 5.5px;
+}
+.p2-desc .p2-time img{
+	width: 13px;
+	height: 5.5px;
+	background-size: 100% 100%;
 }
 
 .p2-desc .p2-1935{
@@ -343,7 +351,30 @@ export default {
 	margin-left: -35.25px;
 	z-index: 100;
 }
+.p2-mask {
+	background-image: url(../assets/images/mask.png);
+	background-size: 800px 603px;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-position: -425px;
+}
 
+.play .p2-mask {
+	opacity: 0;
+	-webkit-animation: show-mask 2s linear 1.8s forwards;
+}
+@keyframes show-mask {
+	0% {
+		opacity: 1;
+		background-position-x: -425px;
+	}
+	100% {
+		opacity: 1;
+		background-position-x: 0px;
+	}
+}
 /*拉开*/
 .play .p2-desc .p2-top {
 	opacity: 0;
@@ -496,7 +527,7 @@ export default {
 	   opacity: 1
 	}
 }
-.play .p2-desc .p2-light {
+/*.play .p2-desc .p2-light {
 	opacity: 0;
 	-webkit-animation: time-show 2s linear 1.8s forwards;
 }
@@ -513,7 +544,7 @@ export default {
 		left: 327.5px;
 		opacity: 0;
 	}
-}
+}*/
 .play .p2-desc .p2-time-point {
 	opacity: 0;
 	-webkit-animation: point-show 2s linear 1.8s forwards;
@@ -687,4 +718,100 @@ export default {
 		-webkit-transform: rotate(40deg);
 	}
 }*/
+
+
+@media only screen
+and (max-device-width : 320px){
+.dir-next {
+ 	bottom: -5px;
+}
+.p1-top {
+	width: 180px;
+	margin-left: -90px;
+}
+.p2-desc {
+	top: 4px;
+	width: 320px;
+	height: 540px;
+	margin-left: -160px;
+}
+.p2-desc .p2-top{
+	width: 315px;
+	margin-left: -157px;
+}
+.p2-desc .p2-bottom{
+	width: 315px;
+	margin-left: -154px;
+}
+.p2-desc .p2-1935 {
+	top: 431px;
+}
+.p2-desc .p2-2016 {
+	top: 431px;
+}
+.p2-desc .p2-1935-text {
+	top: 486.5px;
+}
+.p2-desc .p2-2016-text {
+	top: 486.5px;
+}
+.p2-desc .p2-time-base{
+	width: 276px;
+	margin-left: -138px;
+	top: 456.5px;
+}
+.p2-desc .p2-time-point{
+	top: 463px;
+	left: 270px;
+}
+.p2-desc .p2-time-line {
+	width: 267px;
+	top: 470px;
+}
+.p2-desc .p2-up-text {
+	left: 57px;
+}
+.p2-desc .p2-up-people {
+	left: 100px;
+}
+.play .p2-desc .p2-time-point {
+	opacity: 0;
+	-webkit-animation: point-show1 1.7s linear 1.8s forwards;
+}
+@keyframes point-show1 {
+	0% {
+		opacity: 1;
+		left: 0px;
+	}
+	100% {
+		opacity: 1;
+		left: 270px;
+	}
+}
+.play .p2-desc .p2-time-line {
+	opacity: 0;
+	-webkit-animation: line-show1 1.7s linear 1.8s forwards;
+}
+@keyframes line-show1 {
+	0% {
+		opacity: 1;
+		width: 0px;
+	}
+	100% {
+		opacity: 1;
+		width: 267px;
+	}
+}
+
+}
+
+@media only screen
+and (max-device-height: 480px) { 
+  .p1-top {
+    top: 40px;
+  }
+  .p1-desc {
+    top: 210px;
+  }
+}
 </style>

@@ -38,11 +38,11 @@ export default {
 }
 .p7-desc {
 	position: absolute;
-	width: 372.5px;
+	width: 360px;
 	height: 445px;
 	top: 14px;
 	left: 50%;
-	margin-left: -186.25px;
+	margin-left: -180px;
 }
 .p7-desc .p7-desc-top {
 	background-image: url(../assets/images/p7_top.png);
@@ -50,6 +50,9 @@ export default {
 	background-repeat: no-repeat;
 	position: absolute;
 	width: 372.5px;
+	width: 360px;
+	left: 50%;
+	margin-left: -180px;
 	height: 89.5px;
 	top: 0px;
 }
@@ -77,8 +80,8 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 313px;
-	height: 255.5px;
+    width: 313px;
+    height: 225.5px;
 	top: 0px;
 	left: 20px;
  }
@@ -121,7 +124,7 @@ export default {
  	position: absolute;
  	width: 1px;
  	height: 276px;
- 	left: 8px;
+ 	left: 5px;
  	top: 50px;
  	z-index: 10;
  }
@@ -132,7 +135,7 @@ export default {
  	position: absolute;
  	width: 1px;
  	height: 276px;
- 	right: 6px;
+ 	right: 7px;
  	top: 50px;
  	z-index: 10;
  }
@@ -237,7 +240,7 @@ export default {
 }
 .play .dir-next {
 	opacity: 0;
-	-webkit-animation: show-in .2s linear 1.5s forwards;
+	-webkit-animation: show-in .2s linear 1.5s forwards, shake-next 2s linear 1.7s infinite;
 }
 @keyframes show-in {
   0% {
@@ -249,6 +252,16 @@ export default {
   100% {
     opacity: 1;
   }
+}
+@keyframes shake-next  {
+	0% {
+		opacity: .9;
+		bottom: 18px;
+	}
+	100% {
+		opacity: .5;
+		bottom: 20px;
+	}
 }
 /* 网格抖动 */
 .play .p7-bg-grid {
@@ -266,5 +279,58 @@ export default {
 		opacity: 1;
 		right: 1;
 	}
+}
+
+@media only screen
+ and (max-device-width : 320px){
+ .dir-next {
+ 	bottom: -5px;
+ }
+ .p7-desc {
+ 	top: 4px;
+ 	width: 320px;
+ 	height: 450px;
+ 	margin-left: -160px;
+ }
+ .p7-desc .p7-desc-top{
+ 	width: 318px;
+ 	left: 50%;
+ 	margin-left: -159px;
+ }
+ .p7-desc .p7-desc-bottom{
+ 	width: 308px;
+ 	margin-left: -154px;
+ }
+.p7-desc .p7-desc-title{
+	left: 0px;
+}
+.p7-desc .p7-desc-button{
+	left: 36px;
+}
+.play .dir-next {
+	opacity: 0;
+	-webkit-animation: show-in .2s linear 1.5s forwards, shake-next 2s linear 1.7s infinite;
+}
+@keyframes show-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shake-next  {
+	0% {
+		opacity: .9;
+		bottom: -3px;
+	}
+	100% {
+		opacity: .5;
+		bottom: -5px;
+	}
+}
 }
 </style>
