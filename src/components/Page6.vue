@@ -621,7 +621,19 @@ export default {
  and (max-device-width : 736px)
   and (min-device-width: 414px){
  	.p6-desc {
- 		height: 610px;
+ 		height: 620px;
+ 	}
+   .p6-desc .p6-circle {
+     position: relative;
+ 		top: 40px;
+ 	}
+   .p6-desc .p6-line {
+     position: relative;
+ 		top: 40px;
+ 	} .p6-desc .p6-desc-bg-dress-circle1 {
+ 		top: 294px;
+ 	} .p6-desc .p6-desc-bg-dress-circle2 {
+ 		top: 402px;
  	}
  }
 @media only screen

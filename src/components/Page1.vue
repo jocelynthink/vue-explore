@@ -456,7 +456,7 @@ export default {
 }
 .play .dir-next {
   opacity: 0;
-  -webkit-animation: show-in .2s linear 1.5s forwards, shake-next 2s ease-in 1.7s infinite;
+  -webkit-animation: show-in .2s linear 1.5s forwards, shake-next 1s ease-in 1.7s infinite;
 }
 @keyframes show-in {
   0% {
@@ -471,12 +471,13 @@ export default {
 }
 @keyframes shake-next  {
   0% {
-    opacity: .9;
     bottom: 18px;
   }
+  50% {
+    bottom: 24px;
+  }
   100% {
-    opacity: .5;
-    bottom: 20px;
+    bottom: 30px;
   }
 }
 
@@ -521,7 +522,7 @@ export default {
 
 
 @media only screen
-and (max-device-height: 480px) { 
+and (max-device-height: 480px) {
   .p1-top {
     top: 40px;
   }
