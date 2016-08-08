@@ -565,7 +565,35 @@ export default {
  	}
  }
 
- @media only screen
+ 
+@media only screen 
+and (max-device-height: 736px)
+ and (min-device-width: 414px){
+	.p4-mask {
+		background-size: 883.2px auto;
+		background-position: -469.2px;
+	}
+	.play .p4-mask {
+	-webkit-animation: show-mask1 2s linear 2.3s forwards;
+}
+@keyframes show-mask1 {
+	0% {
+		background-position-x: -469.2px;
+	}
+	100% {
+		background-position-x: 0px;
+
+	}
+}
+}
+
+@media only screen
+and (max-device-height: 667px) {
+	.p4-desc {
+		height: 615px;
+	}
+}
+@media only screen
  and (max-device-width : 320px){
  .dir-next {
  	bottom: -5px;
@@ -660,12 +688,5 @@ export default {
  .p4-desc .p4-right-circle2 {
  	top: 282px;
  }
-}
-
-@media only screen
-and (max-device-height: 667px) {
-	.p4-desc {
-		height: 615px;
-	}
 }
 </style>

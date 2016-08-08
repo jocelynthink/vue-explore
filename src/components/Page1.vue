@@ -431,16 +431,19 @@ export default {
 
 .play .p1-desc .p1-desc-light {
   opacity: 0;
-  -webkit-animation: light-show .5s linear 1.5s forwards, light-shake 2s linear alternate  infinite;
+  -webkit-animation: light-show 1s linear 1.5s forwards, light-shake 2s linear 2.5s alternate  infinite;
 }
 @keyframes light-show {
   0% {
     opacity: 1;
     left: 0px;
   }
-  100% {
+  50% {
     opacity: 1;
     left: 160px;
+  }
+  100% {
+    opacity: 0;
   }
 }
 @keyframes light-shake {
@@ -516,6 +519,16 @@ export default {
 }*/
 
 
+
+@media only screen
+and (max-device-height: 480px) { 
+  .p1-top {
+    top: 40px;
+  }
+  .p1-desc {
+    top: 210px;
+  }
+}
 @media only screen
 and (max-device-width : 320px){
 .dir-next {
@@ -576,15 +589,6 @@ and (max-device-width : 320px){
       opacity: 1;
       left: 130px;
     }
-  }
-}
-@media only screen
-and (max-device-height: 480px) { 
-  .p1-top {
-    top: 40px;
-  }
-  .p1-desc {
-    top: 210px;
   }
 }
 </style>

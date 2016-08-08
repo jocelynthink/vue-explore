@@ -74,7 +74,7 @@ export default {
 .p6-desc {
 	position: absolute;
 	width: 372.5px;
-	height: 450px;
+	height: 516px;
 	top: 8px;
 	left: 50%;
 	margin-left: -186.25px;
@@ -617,6 +617,13 @@ export default {
 		right: 1;
 	}
 }
+ @media only screen
+ and (max-device-width : 736px)
+  and (min-device-width: 414px){
+ 	.p6-desc {
+ 		height: 610px;
+ 	}
+ }
 @media only screen
  and (max-device-width : 320px){
  .dir-next {
@@ -650,11 +657,4 @@ export default {
  }
 }
 
-
- @media only screen
- and (max-device-width : 736px){
- 	.p6-desc {
- 		height: 630px;
- 	}
- }
 </style>

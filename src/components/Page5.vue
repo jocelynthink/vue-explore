@@ -53,7 +53,7 @@ export default {
 .p5-desc {
 	position: absolute;
 	width: 372.5px;
-	height: 490px;
+	height: 450px;
 	top: 8px;
 	left: 50%;
 	margin-left: -186.25px;
@@ -377,6 +377,16 @@ export default {
 		right: 1;
 	}
 }
+
+ @media only screen
+ and (max-device-width : 667px ) {
+ 	.p5-desc {
+ 		height: 488px;
+ 	}
+ 	.p5-desc .p5-desc-title {
+		top: 454px;
+ }
+}
 @media only screen
  and (max-device-width : 320px){
  .dir-next {
@@ -416,15 +426,10 @@ export default {
  .p5-desc .p5-desc-title{
  	top: 414px;
  }
+/* 	.p5-desc .p5-desc-title {
+		top: 500px;
+ }*/
  }
 
- @media only screen
- and (max-device-width : 736px){
- 	.p5-desc {
- 		height: 535px;
- 	}
- 	.p5-desc .p5-desc-title {
-		top: 500px;
- }
-}
+
 </style>

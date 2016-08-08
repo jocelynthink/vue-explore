@@ -75,7 +75,7 @@ export default {
 .p7-desc {
 	position: absolute;
 	width: 360px;
-	height: 445px;
+	height: 516px;
 	top: 14px;
 	left: 50%;
 	margin-left: -180px;
@@ -419,9 +419,10 @@ export default {
 
 
  @media only screen
- and (max-device-width : 736px){
+ and (max-device-width : 736px)
+  and (min-device-width: 414px){
  	.p7-desc {
- 		height: 630px;
+ 		height: 600px;
  	}
  	.p7-top {
  		position: relative;

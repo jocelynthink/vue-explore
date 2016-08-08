@@ -575,6 +575,34 @@ export default {
 	}
 }
 
+
+@media only screen
+and (max-device-height: 667px) {
+	.p3-desc {
+		height: 615px;
+	}
+}
+@media only screen 
+and (max-device-height: 736px)
+ and (min-device-width: 414px){
+	.p3-mask {
+		background-size: 883.2px auto;
+		background-position: -469.2px;
+	}
+	.play .p3-mask {
+	-webkit-animation: show-mask1 2s linear 1.8s forwards;
+}
+@keyframes show-mask1 {
+	0% {
+		background-position-x: -469.2px;
+	}
+	100% {
+		background-position-x: 0px;
+
+	}
+}
+}
+
 @media only screen
 and (max-device-width : 320px){
 .dir-next {
@@ -653,11 +681,5 @@ and (max-device-width : 320px){
 		width: 267px;
 	}
 }
-}
-@media only screen
-and (max-device-height: 667px) {
-	.p3-desc {
-		height: 615px;
-	}
 }
 </style>
