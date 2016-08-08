@@ -453,7 +453,7 @@ export default {
 }
 .play .dir-next {
   opacity: 0;
-  -webkit-animation: show-in .2s linear 1.5s forwards, shake-next 2s linear 1.7s infinite;
+  -webkit-animation: show-in .2s linear 1.5s forwards, shake-next 2s ease-in 1.7s infinite;
 }
 @keyframes show-in {
   0% {
