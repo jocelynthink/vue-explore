@@ -63,10 +63,10 @@ export default {
 		 isanimation: false,
 		 items: [
 		 		date1,
-	 			date2,	
-				date3,	
-				date4,	
-				date5,	
+	 			date2,
+				date3,
+				date4,
+				date5,
 				date6
 		 	]
 		}
@@ -353,7 +353,7 @@ export default {
 .p3-mask {
 	background-image: url(../assets/images/mask.png);
 	background-size: 800px 603px;
-	background-repeat: no-repeat;
+	background-repeat: repeat-x;
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -582,7 +582,7 @@ and (max-device-height: 667px) {
 		height: 615px;
 	}
 }
-@media only screen 
+@media only screen
 and (max-device-height: 736px)
  and (min-device-width: 414px){
 	.p3-mask {

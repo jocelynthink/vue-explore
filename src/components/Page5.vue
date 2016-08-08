@@ -322,7 +322,7 @@ export default {
 
 @keyframes penguin-rotate {
 	0% {
-		
+
 		-webkit-transform: rotateY(0deg);
 	}
 	33% {
@@ -381,10 +381,10 @@ export default {
  @media only screen
  and (max-device-width : 667px ) {
  	.p5-desc {
- 		height: 488px;
+ 		height: 448px;
  	}
  	.p5-desc .p5-desc-title {
-		top: 454px;
+		top: 414px;
  }
 }
 @media only screen

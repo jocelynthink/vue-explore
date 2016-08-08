@@ -7,7 +7,7 @@
 			<div class="p4-desc-top"></div>
 			<div class="p4-desc-bottom"></div>
 			<div class="p4-desc-people-eara">
-				<div class="p4-desc-people"></div>			
+				<div class="p4-desc-people"></div>
 				<div class="p4-desc-people-left"></div>
 				<div class="p4-desc-people-right"></div>
 			</div>
@@ -303,7 +303,7 @@ export default {
 .p4-mask {
 	background-image: url(../assets/images/mask.png);
 	background-size: 800px 603px;
-	background-repeat: no-repeat;
+	background-repeat: repeat-x;
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -565,8 +565,8 @@ export default {
  	}
  }
 
- 
-@media only screen 
+
+@media only screen
 and (max-device-height: 736px)
  and (min-device-width: 414px){
 	.p4-mask {
