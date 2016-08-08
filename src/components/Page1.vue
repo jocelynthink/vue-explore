@@ -228,8 +228,9 @@ export default {
   height: 2px;
   position: absolute;
   background-color: #2a30a1;
-  box-shadow: 0px 0px 1px #fff;
+  box-shadow: 0px 0px 5px #fff;
   border-radius: 50%;
+  transform: rotate(128deg);
 }
 .star1 {
   top: 165px;
@@ -269,7 +270,7 @@ export default {
 }
 .play .star {
   opacity: 0;
-  -webkit-animation: showIn .5s linear .5s infinite alternate;
+  -webkit-animation: showIn 1s linear .5s infinite alternate;
 }
 .play .p1-logo {
   opacity: 0;
@@ -450,18 +451,32 @@ export default {
     opacity: 1;
   }
 }
-.page1 .dir-next {
+.play .dir-next {
   opacity: 0;
-  -webkit-animation: showNext .5s linear 2s forwards;
+  -webkit-animation: show-in .2s linear 1.5s forwards, shake-next 2s linear 1.7s infinite;
 }
-@keyframes showNext {
+@keyframes show-in {
   0% {
+    opacity: 0;
+  }
+  50% {
     opacity: 0;
   }
   100% {
     opacity: 1;
   }
 }
+@keyframes shake-next  {
+  0% {
+    opacity: .9;
+    bottom: 18px;
+  }
+  100% {
+    opacity: .5;
+    bottom: 20px;
+  }
+}
+
 /*.p1-desc {
   background-size: 100%;
   position: absolute;

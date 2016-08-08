@@ -322,16 +322,13 @@ export default {
 }
 
 .play .p4-mask {
-	opacity: 0;
 	-webkit-animation: show-mask 2s linear 2.3s forwards;
 }
 @keyframes show-mask {
 	0% {
-		opacity: 1;
 		background-position-x: -425px;
 	}
 	100% {
-		opacity: 1;
 		background-position-x: 0px;
 	}
 }
@@ -663,5 +660,12 @@ export default {
  .p4-desc .p4-right-circle2 {
  	top: 282px;
  }
+}
+
+@media only screen
+and (max-device-height: 667px) {
+	.p4-desc {
+		height: 615px;
+	}
 }
 </style>

@@ -2,7 +2,6 @@
 	<div class="page2" v-bind:class="{'play':current===2}">
 		<div class="p2-bg-left"></div>
 		<div class="p2-bg-right"></div>
-		<div class="p2-bg-right"></div>
 		<div class="p2-bg-left-grid"></div>
 		<div class="p2-bg-right-grid"></div>
 		<div class="p2-desc">
@@ -362,16 +361,13 @@ export default {
 }
 
 .play .p2-mask {
-	opacity: 0;
 	-webkit-animation: show-mask 2s linear 1.8s forwards;
 }
 @keyframes show-mask {
 	0% {
-		opacity: 1;
 		background-position-x: -425px;
 	}
 	100% {
-		opacity: 1;
 		background-position-x: 0px;
 	}
 }
@@ -813,5 +809,12 @@ and (max-device-height: 480px) {
   .p1-desc {
     top: 210px;
   }
+}
+
+@media only screen
+and (max-device-height: 667px) {
+	.p2-desc {
+		height: 615px;
+	}
 }
 </style>

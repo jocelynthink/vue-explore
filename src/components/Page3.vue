@@ -361,16 +361,13 @@ export default {
 }
 
 .play .p3-mask {
-	opacity: 0;
 	-webkit-animation: show-mask 2s linear 1.8s forwards;
 }
 @keyframes show-mask {
 	0% {
-		opacity: 1;
 		background-position-x: -425px;
 	}
 	100% {
-		opacity: 1;
 		background-position-x: 0px;
 	}
 }
@@ -656,6 +653,11 @@ and (max-device-width : 320px){
 		width: 267px;
 	}
 }
-
+}
+@media only screen
+and (max-device-height: 667px) {
+	.p3-desc {
+		height: 615px;
+	}
 }
 </style>

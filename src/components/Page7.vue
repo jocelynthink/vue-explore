@@ -1,10 +1,14 @@
 <template>
 	<div class="page7" v-bind:class="{'play':current===7}">
+	<div class="p7-top">
+		<div class="p7-top-line"></div>
+		<div class="p7-top-circle"></div>
+		<div class="p7-top-text"></div>
+	</div>
 		<div class="p7-desc">
 			<div class="p7-desc-top"></div>
 			<div class="p7-desc-bottom"></div>
 			<div class="p7-desc-grid"></div>
-			<div class="p7-desc-title"></div>
 			<div class="p7-desc-button"></div>
 			<div class="p7-desc-text"></div>
 			<div class="p7-desc-logo"></div>
@@ -15,7 +19,6 @@
 			<div class="p7-right-circle1 circle"></div>
 			<div class="p7-right-circle2 circle"></div>
 		</div>
-		<div class="dir-next"></div>
 	</div>
 </template>
 
@@ -35,6 +38,39 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: relative;
+}
+.p7-top{
+
+}
+.p7-top-line {
+	background-image: url(../assets/images/p7_top_line.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 81px;
+	left: 18px;
+	width: 313px;
+	height: 78px;
+}
+.p7-top-circle {
+	background-image: url(../assets/images/p7_top_circle.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 224px;
+	height: 225.5px;
+	top: 14px;
+	left: 74px;
+}
+.p7-top-text {
+	background-image: url(../assets/images/p7_top_text.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 148px;
+	height: 76.5px;
+	top: 82px;
+	left: 112px;
 }
 .p7-desc {
 	position: absolute;
@@ -280,7 +316,54 @@ export default {
 		right: 1;
 	}
 }
-
+.play .p7-top-circle {
+	-webkit-animation: circle-show-page .5s linear 2s both;
+}
+@keyframes circle-show-page {
+	0%{
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: rotate(-360deg);
+	}
+}
+.play .p7-top-text {
+	-webkit-animation: bounce-show-page 1s 1s ease both;
+}
+@keyframes bounce-show-page{
+	0%{
+		opacity:0;
+		-webkit-transform:translateY(-2000px)
+	}
+	60%{
+		opacity:1;
+		-webkit-transform:translateY(40px)
+	}
+	80%{
+		opacity:1;
+		-webkit-transform:translateY(-10px)
+	}
+	100%{
+		opacity:1;
+		-webkit-transform:translateY(0)
+	}
+}
+.play .p7-top-line  {
+	-webkit-animation: line-show-page .5s linear 2.5s both;
+}
+@keyframes line-show-page {
+	0% {
+		opacity: 0;
+		width: 0px;
+		left: 175.5px;
+	}
+	100% {
+		opacity: 1;
+		width: 313px;
+		left: 18px;
+	}
+}
 @media only screen
  and (max-device-width : 320px){
  .dir-next {
@@ -333,4 +416,16 @@ export default {
 	}
 }
 }
+
+
+ @media only screen
+ and (max-device-width : 736px){
+ 	.p7-desc {
+ 		height: 630px;
+ 	}
+ 	.p7-top {
+ 		position: relative;
+ 		left: 30px;
+ 	}
+ }
 </style>

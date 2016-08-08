@@ -417,4 +417,14 @@ export default {
  	top: 414px;
  }
  }
+
+ @media only screen
+ and (max-device-width : 736px){
+ 	.p5-desc {
+ 		height: 535px;
+ 	}
+ 	.p5-desc .p5-desc-title {
+		top: 500px;
+ }
+}
 </style>
