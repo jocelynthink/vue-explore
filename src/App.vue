@@ -1,7 +1,7 @@
 <template>
-  <div  v-bind:class="{ 'music_play': isMusicPlay, 'music_stop': !isMusicPlay}" 
+  <div  v-bind:class="{ 'music_play': isMusicPlay, 'music_stop': !isMusicPlay}"
         v-on:touchstart="playMusic">
-    <audio src="static/bgmusic.mp3" loop="loop" id="music" autoplay v-el:myaudio></audio>
+    <audio src="static/bgmusic.mp3" loop="loop" id="music"  v-el:myaudio></audio>
   </div>
   <welcome v-if="isLoading"></welcome>
   <div  id="srcolldiv" class="scroll-list"
@@ -30,7 +30,7 @@ import Page6 from './components/Page6'
 import Page7 from './components/Page7'
 import Welcome from './components/Welcome'
 export default {
-  components: { 
+  components: {
     Page1,
     Page2,
     Page3,
@@ -99,16 +99,16 @@ export default {
         case 3:
           second = 4;
           break;
-        case 4: 
+        case 4:
           second = 4.7;
           break;
-        case 5: 
+        case 5:
           second = 2;
           break;
-        case 6: 
+        case 6:
           second = 3.5;
           break;
-        case 7: 
+        case 7:
           second = 1;
           break;
       }
@@ -126,7 +126,7 @@ export default {
         music.pause();
         this.$els.myaudio.pause();
         console.log('pause');
-      }else { 
+      }else {
         music.play();
       }
       this.isMusicPlay = !this.isMusicPlay;
@@ -148,6 +148,8 @@ export default {
     //   var div = document.getElementById('srcolldiv');
     //   div.style.height = this.count * 100 + '%';
     // }
+    var music = document.getElementById('music');
+    music.play();
   }
 }
 </script>

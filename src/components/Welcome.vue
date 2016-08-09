@@ -1,6 +1,6 @@
 <template>
 	<div class="loading">
-        <div class="bg">        
+        <div class="bg">
     		<div class="circle_process">
     			<div class="wrapper right">
     				<div class="circle rightcircle" id="rightcircle"></div>
@@ -19,10 +19,14 @@
 </template>
 
 <script>
+
 import loading from '../assets/images/loading.png';
 import loading_title1 from '../assets/images/loading_title1.png';
 import loading_title2 from '../assets/images/loading_title2.png';
+import mask from '../assets/images/mask.png';
 import music_icon from '../assets/images/music_icon.png';
+import music_play from '../assets/images/music_play.png';
+import music_stop from '../assets/images/music_stop.png';
 import p1_bg from '../assets/images/p1_bg.png';
 import p1_circle from '../assets/images/p1_circle.png';
 import p1_desc from '../assets/images/p1_desc.png';
@@ -50,6 +54,12 @@ import p2_bottom from '../assets/images/p2_bottom.png';
 import p2_light from '../assets/images/p2_light.png';
 import p2_people from '../assets/images/p2_people.png';
 import p2_progress from '../assets/images/p2_progress.png';
+import p2_s1935 from '../assets/images/p2_s1935.png';
+import p2_s1938 from '../assets/images/p2_s1938.png';
+import p2_s1960 from '../assets/images/p2_s1960.png';
+import p2_s1965 from '../assets/images/p2_s1965.png';
+import p2_s1987 from '../assets/images/p2_s1987.png';
+import p2_s2016 from '../assets/images/p2_s2016.png';
 import p2_text from '../assets/images/p2_text.png';
 import p2_time_base from '../assets/images/p2_time_base.png';
 import p2_top from '../assets/images/p2_top.png';
@@ -65,6 +75,12 @@ import p3_bg_left from '../assets/images/p3_bg_left.png';
 import p3_bg_left_grid from '../assets/images/p3_bg_left_grid.png';
 import p3_bg_right from '../assets/images/p3_bg_right.png';
 import p3_bg_right_grid from '../assets/images/p3_bg_right_grid.png';
+import p3_s1936 from '../assets/images/p3_s1936.png';
+import p3_s1948 from '../assets/images/p3_s1948.png';
+import p3_s1956 from '../assets/images/p3_s1956.png';
+import p3_s1968 from '../assets/images/p3_s1968.png';
+import p3_s1982 from '../assets/images/p3_s1982.png';
+import p3_s2016 from '../assets/images/p3_s2016.png';
 import p3_text from '../assets/images/p3_text.png';
 import p4_1951 from '../assets/images/p4_1951.png';
 import p4_1951_text from '../assets/images/p4_1951_text.png';
@@ -78,6 +94,7 @@ import p4_people_left from '../assets/images/p4_people_left.png';
 import p4_people_right from '../assets/images/p4_people_right.png';
 import p4_text1 from '../assets/images/p4_text1.png';
 import p4_text2 from '../assets/images/p4_text2.png';
+import p4_title from '../assets/images/p4_title.png';
 import p4_top from '../assets/images/p4_top.png';
 import p5_bottom from '../assets/images/p5_bottom.png';
 import p5_qq from '../assets/images/p5_qq.png';
@@ -95,11 +112,13 @@ import p6_circle3_1 from '../assets/images/p6_circle3_1.png';
 import p6_circle4 from '../assets/images/p6_circle4.png';
 import p6_circle4_1 from '../assets/images/p6_circle4_1.png';
 import p6_circle5 from '../assets/images/p6_circle5.png';
+import p6_circle52 from '../assets/images/p6_circle52.png';
 import p6_circle5_1 from '../assets/images/p6_circle5_1.png';
 import p6_circle6 from '../assets/images/p6_circle6.png';
 import p6_circle6_1 from '../assets/images/p6_circle6_1.png';
 import p6_dress_circle1 from '../assets/images/p6_dress_circle1.png';
 import p6_dress_circle2 from '../assets/images/p6_dress_circle2.png';
+import p6_dw from '../assets/images/p6_dw.png';
 import p6_line1 from '../assets/images/p6_line1.png';
 import p6_line2 from '../assets/images/p6_line2.png';
 import p6_line3 from '../assets/images/p6_line3.png';
@@ -118,6 +137,9 @@ import p7_logo from '../assets/images/p7_logo.png';
 import p7_text from '../assets/images/p7_text.png';
 import p7_title from '../assets/images/p7_title.png';
 import p7_top from '../assets/images/p7_top.png';
+import p7_top_circle from '../assets/images/p7_top_circle.png';
+import p7_top_line from '../assets/images/p7_top_line.png';
+import p7_top_text from '../assets/images/p7_top_text.png';
 import paint from '../assets/images/paint.jpg';
 
 export default {
@@ -179,7 +201,7 @@ export default {
             if(callback) {
                 this._loadProgress(callback,window._pandaImageLoadArray.length,len);
             }
-            
+
         },
         _loadProgress(callback, begin, all){
             var self = this;
@@ -200,106 +222,127 @@ export default {
     ready () {
         window._pandaImageLoaded = false;
         var pics = [
-            loading,
-            loading_title1,
-            loading_title2,
-            music_icon,
-            p1_bg,
-            p1_circle,
-            p1_desc,
-            p1_desc_bottom,
-            p1_desc_dress_bottom,
-            p1_desc_dress_top,
-            p1_desc_top,
-            p1_light,
-            p1_line,
-            p1_logo,
-            p1_logo_left,
-            p1_logo_right,
-            p1_next,
-            p1_title1,
-            p1_title2,
-            p2_1935,
-            p2_1935_text,
-            p2_2016,
-            p2_2016_text,
-            p2_bg_left,
-            p2_bg_left_grid,
-            p2_bg_right,
-            p2_bg_right_grid,
-            p2_bottom,
-            p2_light,
-            p2_people,
-            p2_progress,
-            p2_text,
-            p2_time_base,
-            p2_top,
-            p2_top_bg,
-            p2_top_dress,
-            p2_top_dress2,
-            p2_up_text,
-            p3_1968,
-            p3_1968_text,
-            p3_2016,
-            p3_2016_text,
-            p3_bg_left,
-            p3_bg_left_grid,
-            p3_bg_right,
-            p3_bg_right_grid,
-            p3_text,
-            p4_1951,
-            p4_1951_text,
-            p4_2016,
-            p4_2016_text,
-            p4_bg_grid,
-            p4_bg_left,
-            p4_bg_right,
-            p4_people,
-            p4_people_left,
-            p4_people_right,
-            p4_text1,
-            p4_text2,
-            p4_top,
-            p5_bottom,
-            p5_qq,
-            p5_qq_bottom,
-            p5_qq_light,
-            p5_title,
-            p5_top,
-            p6_bottom,
-            p6_circle1,
-            p6_circle1_1,
-            p6_circle2,
-            p6_circle2_1,
-            p6_circle3,
-            p6_circle3_1,
-            p6_circle4,
-            p6_circle4_1,
-            p6_circle5,
-            p6_circle5_1,
-            p6_circle6,
-            p6_circle6_1,
-            p6_dress_circle1,
-            p6_dress_circle2,
-            p6_line1,
-            p6_line2,
-            p6_line3,
-            p6_line4,
-            p6_line5,
-            p6_text,
-            p6_title,
-            p6_title_left,
-            p6_title_right,
-            p7_bg,
-            p7_bottom,
-            p7_button,
-            p7_grid,
-            p7_light,
-            p7_logo,
-            p7_text,
-            p7_title,
-            p7_top,
-            paint,
+          loading,
+          loading_title1,
+          loading_title2,
+          mask,
+          music_icon,
+          music_play,
+          music_stop,
+          p1_bg,
+          p1_circle,
+          p1_desc,
+          p1_desc_bottom,
+          p1_desc_dress_bottom,
+          p1_desc_dress_top,
+          p1_desc_top,
+          p1_light,
+          p1_line,
+          p1_logo,
+          p1_logo_left,
+          p1_logo_right,
+          p1_next,
+          p1_title1,
+          p1_title2,
+          p2_1935,
+          p2_1935_text,
+          p2_2016,
+          p2_2016_text,
+          p2_bg_left,
+          p2_bg_left_grid,
+          p2_bg_right,
+          p2_bg_right_grid,
+          p2_bottom,
+          p2_light,
+          p2_people,
+          p2_progress,
+          p2_s1935,
+          p2_s1938,
+          p2_s1960,
+          p2_s1965,
+          p2_s1987,
+          p2_s2016,
+          p2_text,
+          p2_time_base,
+          p2_top,
+          p2_top_bg,
+          p2_top_dress,
+          p2_top_dress2,
+          p2_up_text,
+          p3_1968,
+          p3_1968_text,
+          p3_2016,
+          p3_2016_text,
+          p3_bg_left,
+          p3_bg_left_grid,
+          p3_bg_right,
+          p3_bg_right_grid,
+          p3_s1936,
+          p3_s1948,
+          p3_s1956,
+          p3_s1968,
+          p3_s1982,
+          p3_s2016,
+          p3_text,
+          p4_1951,
+          p4_1951_text,
+          p4_2016,
+          p4_2016_text,
+          p4_bg_grid,
+          p4_bg_left,
+          p4_bg_right,
+          p4_people,
+          p4_people_left,
+          p4_people_right,
+          p4_text1,
+          p4_text2,
+          p4_title,
+          p4_top,
+          p5_bottom,
+          p5_qq,
+          p5_qq_bottom,
+          p5_qq_light,
+          p5_title,
+          p5_top,
+          p6_bottom,
+          p6_circle1,
+          p6_circle1_1,
+          p6_circle2,
+          p6_circle2_1,
+          p6_circle3,
+          p6_circle3_1,
+          p6_circle4,
+          p6_circle4_1,
+          p6_circle5,
+          p6_circle52,
+          p6_circle5_1,
+          p6_circle6,
+          p6_circle6_1,
+          p6_dress_circle1,
+          p6_dress_circle2,
+          p6_dw,
+          p6_line1,
+          p6_line2,
+          p6_line3,
+          p6_line4,
+          p6_line5,
+          p6_text,
+          p6_title,
+          p6_title_left,
+          p6_title_right,
+          p7_bg,
+          p7_bottom,
+          p7_button,
+          p7_grid,
+          p7_light,
+          p7_logo,
+          p7_text,
+          p7_title,
+          p7_top,
+          p7_top_circle,
+          p7_top_line,
+          p7_top_text,
+          paint,
         ];
         this._loadImages(pics,function(){
             console.log('消失');
@@ -309,7 +352,7 @@ export default {
 }
 </script>
 
-<style scoped>	
+<style scoped>
 .loading {
 	width: 100vw;
 	height: 100vh;
@@ -387,7 +430,7 @@ export default {
     }
 }
 .percent {
-    position: absolute;    
+    position: absolute;
     left: 50%;
     top: 50%;
     margin-left: -26px;
@@ -453,7 +496,7 @@ and (max-device-width : 320px){
 
 
 <!-- 第一张：背景不变，还原图条
-第二张：打开显示logo 上下条从中间打开 横着的条纹要抖动 探索和实现时间有深色的按钮 
+第二张：打开显示logo 上下条从中间打开 横着的条纹要抖动 探索和实现时间有深色的按钮
 每个小的圆圈要先闪动 左下角2016不需要
 第三张：快速打开  左脸出 右脸出 人走动  人走（同步的时候亮光）
 网格移动 年代渐变
