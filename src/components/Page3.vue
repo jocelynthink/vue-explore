@@ -491,8 +491,30 @@ export default {
 	-webkit-animation: showIn .2s linear 1.8s forwards;
 }
 .play .dir-next {
-	opacity: 0;
-	-webkit-animation: showIn .5s linear 4s forwards;
+  opacity: 0;
+  -webkit-animation: showIn .2s linear 4s forwards, shake-next 1s ease-in 4.2s infinite;
+}
+@keyframes showIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shake-next  {
+  0% {
+    bottom: 18px;
+  }
+  50% {
+    bottom: 24px;
+  }
+  100% {
+    bottom: 30px;
+  }
 }
 .play .p3-desc .p3-up-text {
 	opacity: 0;
@@ -611,7 +633,7 @@ and (max-device-width : 320px){
 .p3-desc {
 	top: 4px;
 	width: 320px;
-	height: 540px;
+	height: 460px;
 	margin-left: -160px;
 }
 .p3-desc .p3-top{
@@ -622,36 +644,48 @@ and (max-device-width : 320px){
 	width: 315px;
 	margin-left: -154px;
 }
+.p3-desc .p3-up-text {
+	top: 50px;
+}
+.p3-desc .p3-up-people{
+	top: 25px;
+}
 .p3-desc .p3-1968 {
-	top: 431px;
+	top: 372px;
 }
 .p3-desc .p3-2016 {
-	top: 431px;
+	top: 373px;
 }
 .p3-desc .p3-1968-text {
-	top: 486.5px;
+	top: 423.5px;
 }
 .p3-desc .p3-2016-text {
-	top: 486.5px;
+	top: 423.5px;
 }
 .p3-desc .p3-time-base{
 	width: 276px;
 	margin-left: -138px;
-	top: 456.5px;
+	top: 398.5px;
 }
 .p3-desc .p3-time-point{
-	top: 463px;
+	top: 405px;
 	left: 270px;
 }
 .p3-desc .p3-time-line {
 	width: 267px;
-	top: 470px;
+	top: 412px;
 }
 .p3-desc .p3-up-text {
 	left: 13px;
 }
 .p3-desc .p3-up-people {
 	left: 129px;
+}
+.p3-desc .p3-right-circle1 {
+	top: 322px;
+}
+.p3-desc .p3-right-circle2 {
+	top: 345px;
 }
 .play .p3-desc .p3-time-point {
 	opacity: 0;
@@ -680,6 +714,32 @@ and (max-device-width : 320px){
 		opacity: 1;
 		width: 267px;
 	}
+}
+.play .dir-next {
+	opacity: 0;
+	-webkit-animation: show-in .2s linear 1.5s forwards, shake-next1 2s linear 1.7s infinite;
+}
+@keyframes show-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shake-next1  {
+   0% {
+    bottom: -5px;
+  }
+  50% {
+    bottom: -1px;
+  }
+  100% {
+    bottom: -7px;
+  }
 }
 }
 </style>

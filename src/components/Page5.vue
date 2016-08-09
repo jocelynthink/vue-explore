@@ -1,4 +1,4 @@
-<template>
+.<template>
 	<div class="page5" v-bind:class="{'play':current === 5}">
 		<div class="p5-bg-grid"></div>
 		<div class="p5-desc">
@@ -357,8 +357,30 @@ export default {
 	}
 }
 .play .dir-next {
-	opacity: 0;
-	-webkit-animation: showIn .5s linear 2s forwards;
+  opacity: 0;
+  -webkit-animation: showIn .2s linear 2s forwards, shake-next 1s ease-in 2.4s infinite;
+}
+@keyframes showIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shake-next  {
+  0% {
+    bottom: 18px;
+  }
+  50% {
+    bottom: 24px;
+  }
+  100% {
+    bottom: 30px;
+  }
 }
 /* 网格抖动 */
 .play .p5-bg-grid {
@@ -395,7 +417,7 @@ export default {
  .p5-desc {
  	top: 4px;
  	width: 320px;
- 	height: 450px;
+ 	height: 365px;
  	margin-left: -160px;
  }
  .p5-desc .p5-desc-top{
@@ -407,28 +429,55 @@ export default {
  	margin-left: -154px;
  }
  .p5-desc .p5-desc-center {
-	top: 90px;
+	top: 63px;
 	width: 240px;
 	margin-left: -120px;
  }
  .p5-desc .p5-left-circle1 {
- 	top: 94px;
- }
- .p5-desc .p5-left-circle2 {
- 	top: 118px;
- }
- .p5-desc .p5-right-circle1 {
- 	top: 258px;
- }
- .p5-desc .p5-right-circle2 {
- 	top: 282px;
- }
+	top: 62px;
+}
+.p5-desc .p5-left-circle2 {
+	top: 86px;
+}
+.p5-desc .p5-right-circle1 {
+	top: 226px;
+}
+.p5-desc .p5-right-circle2 {
+	top: 250px;
+}
  .p5-desc .p5-desc-title{
- 	top: 414px;
+ 	top: 331px;
  }
 /* 	.p5-desc .p5-desc-title {
 		top: 500px;
  }*/
+
+ .play .dir-next {
+	opacity: 0;
+	-webkit-animation: show-in .2s linear 1.5s forwards, shake-next1 2s linear 1.7s infinite;
+}
+@keyframes show-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shake-next1  {
+   0% {
+    bottom: -5px;
+  }
+  50% {
+    bottom: -1px;
+  }
+  100% {
+    bottom: -7px;
+  }
+}
  }
 
 

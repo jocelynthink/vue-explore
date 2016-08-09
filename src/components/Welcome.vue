@@ -130,7 +130,7 @@ export default {
     },
     methods: {
         _circleProgress( w ){
-            console.log(rightcircle);
+            // console.log(rightcircle);
             var per = w * 3.6;
             if( per <= 180){
                 rightcircle.style.cssText = "transform: rotate("+(-135+ w*3.6)+"deg)";
@@ -439,6 +439,15 @@ export default {
         transform:  rotate(360deg);
     }
 }*/
+
+
+@media only screen
+and (max-device-width : 320px){
+    .loading {
+        position: relative;
+        top: -80px;
+    }
+}
 </style>
 
 

@@ -14,10 +14,10 @@
 			<div class="p7-desc-logo"></div>
 			<div class="p7-line-left"></div>
 			<div class="p7-line-right"></div>
-			<div class="p7-left-circle1 circle"></div>
+<!-- 			<div class="p7-left-circle1 circle"></div>
 			<div class="p7-left-circle2 circle"></div>
 			<div class="p7-right-circle1 circle"></div>
-			<div class="p7-right-circle2 circle"></div>
+			<div class="p7-right-circle2 circle"></div> -->
 		</div>
 	</div>
 </template>
@@ -290,14 +290,15 @@ export default {
   }
 }
 @keyframes shake-next  {
-	0% {
-		opacity: .9;
-		bottom: 18px;
-	}
-	100% {
-		opacity: .5;
-		bottom: 20px;
-	}
+  0% {
+    bottom: 18px;
+  }
+  50% {
+    bottom: 24px;
+  }
+  100% {
+    bottom: 30px;
+  }
 }
 /* 网格抖动 */
 .play .p7-bg-grid {
@@ -390,30 +391,9 @@ export default {
 .p7-desc .p7-desc-button{
 	left: 36px;
 }
-.play .dir-next {
-	opacity: 0;
-	-webkit-animation: show-in .2s linear 1.5s forwards, shake-next 2s linear 1.7s infinite;
-}
-@keyframes show-in {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes shake-next  {
-	0% {
-		opacity: .9;
-		bottom: -3px;
-	}
-	100% {
-		opacity: .5;
-		bottom: -5px;
-	}
+ .p7-top{
+	position: relative;
+	left: -20px;
 }
 }
 

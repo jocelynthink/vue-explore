@@ -35,10 +35,10 @@
 			</div>
 			<div class="p6-line-left"></div>
 			<div class="p6-line-right"></div>
-			<div class="p6-left-circle1 circle"></div>
+<!-- 			<div class="p6-left-circle1 circle"></div>
 			<div class="p6-left-circle2 circle"></div>
 			<div class="p6-right-circle1 circle"></div>
-			<div class="p6-right-circle2 circle"></div>
+			<div class="p6-right-circle2 circle"></div> -->
 		</div>
 		<div class="dir-next"></div>
 	</div>
@@ -596,10 +596,31 @@ export default {
 }
 
 .play .dir-next {
-	opacity: 0;
-	-webkit-animation: showIn .5s linear 3.5s forwards;
+  opacity: 0;
+  -webkit-animation: showIn .2s linear 3.5s forwards, shake-next 1s ease-in 4s infinite;
 }
-
+@keyframes showIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shake-next  {
+  0% {
+    bottom: 18px;
+  }
+  50% {
+    bottom: 24px;
+  }
+  100% {
+    bottom: 30px;
+  }
+}
 /* 网格抖动 */
 .play .p6-bg-grid {
 	opacity: 0;
@@ -644,7 +665,7 @@ export default {
  .p6-desc {
  	top: 4px;
  	width: 320px;
- 	height: 450px;
+ 	height: 430px;
  	margin-left: -160px;
  }
  .p6-desc .p6-desc-top{
@@ -661,12 +682,43 @@ export default {
  }
 .p6-desc .p6-circle {
 	position: relative;
-    left: -24px
+    left: -24px;
+    top: -20px;
  }
  .p6-desc .p6-line {
  	position: relative;
  	left: -24px;
+ 	top: -20px;
  }
+ .p6-desc .p6-desc-text {
+ 	top: 166px;
+ }
+ .play .dir-next {
+	opacity: 0;
+	-webkit-animation: show-in .2s linear 1.5s forwards, shake-next1 2s linear 1.7s infinite;
+}
+@keyframes show-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shake-next1  {
+  0% {
+    bottom: -5px;
+  }
+  50% {
+    bottom: -1px;
+  }
+  100% {
+    bottom: -7px;
+  }
+}
 }
 
 </style>

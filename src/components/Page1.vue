@@ -540,7 +540,7 @@ and (max-device-width : 320px){
     margin-left: -90px;
   }
   .p1-desc {
-    top: 258px;
+    top: 230px;
     width: 320px;
     margin-left: -160px;
   }
@@ -579,7 +579,7 @@ and (max-device-width : 320px){
   }
   .play .p1-desc .p1-desc-light {
     opacity: 0;
-    -webkit-animation: light-show .5s linear 1.5s forwards;
+    -webkit-animation: light-show .5s linear 1.5s forwards, light-shake 2s linear 2.5s alternate  infinite;;
   }
   @keyframes light-show {
     0% {
@@ -591,5 +591,39 @@ and (max-device-width : 320px){
       left: 130px;
     }
   }
+  @keyframes light-shake {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .play .dir-next {
+  opacity: 0;
+  -webkit-animation: show-in .2s linear 1.5s forwards, shake-next1 2s linear 1.7s infinite;
+}
+@keyframes show-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shake-next1  {
+  0% {
+    bottom: -5px;
+  }
+  50% {
+    bottom: -1px;
+  }
+  100% {
+    bottom: -7px;
+  }
+}
 }
 </style>

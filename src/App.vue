@@ -1,7 +1,8 @@
 <template>
-<!--   <div class="music_btn">
-    <audio src="" loop="loop" id="music"></audio>
-  </div> -->
+  <div  v-bind:class="{ 'music_play': isMusicPlay, 'music_stop': !isMusicPlay}" 
+        v-on:touchstart="playMusic">
+    <audio src="static/bgmusic.mp3" loop="loop" id="music" autoplay v-el:myaudio></audio>
+  </div>
   <welcome v-if="isLoading"></welcome>
   <div  id="srcolldiv" class="scroll-list"
         v-touch:swipeup="swipeup"
@@ -48,7 +49,8 @@ export default {
       isLoading: true,
       preventSwipe: true,
       height: document.body.clientHeight,
-      isAndroid: navigator.userAgent.indexOf('Android') > -1 || navigator.userAgent.indexOf('Adr') > -1
+      isAndroid: navigator.userAgent.indexOf('Android') > -1 || navigator.userAgent.indexOf('Adr') > -1,
+      isMusicPlay: true
     }
   },
   methods: {
@@ -114,6 +116,20 @@ export default {
       setTimeout(() => {
         this.preventSwipe = false;
       }, second * 1000)
+    },
+    playMusic() {
+      var music = document.getElementById('music');
+      music.play();
+      console.log(music);
+      console.log(this.isMusicPlay)
+      if( this.isMusicPlay){
+        music.pause();
+        this.$els.myaudio.pause();
+        console.log('pause');
+      }else { 
+        music.play();
+      }
+      this.isMusicPlay = !this.isMusicPlay;
     }
   },
   events: {
@@ -200,15 +216,35 @@ body {
 .dir-area .dir-two {
   top: 10px;
 }*/
-.music_btn {
-  background: url(./assets/images/music_icon.png) 0px 1px no-repeat;
-  background-size: 32px 62px;
+.music_play {
+  background: url(./assets/images/music_play.png) 0px 0px no-repeat;
+  background-size: 100%;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 40px;
+  right: 23px;
   z-index: 99;
-  width: 32px;
-  height: 32px;
+  width: 35px;
+  height: 35px;
+  -webkit-animation:  music-circle 2s linear 0s infinite ;
+}
+.music_stop {
+  background: url(./assets/images/music_stop.png) 0px 0px no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 40px;
+  right: 23px;
+  z-index: 99;
+  width: 35px;
+  height: 35px;
+}
+
+@keyframes music-circle {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
 .scroll-list {
   -webkit-transition: all .5s ease-out;

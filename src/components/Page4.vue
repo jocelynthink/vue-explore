@@ -543,10 +543,32 @@ export default {
 	-webkit-animation: showPeople .5s linear 1.8s forwards;
  }
  /*next*/
- .page4.play .dir-next {
- 	opacity: 0;
- 	-webkit-animation: showIn .5s linear 4.7s forwards;
- }
+.play .dir-next {
+  opacity: 0;
+  -webkit-animation: showIn .2s linear 4.7s forwards, shake-next 1s ease-in 5s infinite;
+}
+@keyframes showIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shake-next  {
+  0% {
+    bottom: 18px;
+  }
+  50% {
+    bottom: 24px;
+  }
+  100% {
+    bottom: 30px;
+  }
+}
  /* 网格抖动 */
  .play .p4-bg-grid {
  	opacity: 0;
@@ -601,7 +623,7 @@ and (max-device-height: 667px) {
  .p4-desc {
  	top: 4px;
  	width: 320px;
- 	height: 540px;
+ 	height: 460px;
  	margin-left: -160px;
  }
  .p4-desc .p4-desc-top{
@@ -613,29 +635,29 @@ and (max-device-height: 667px) {
  	margin-left: -154px;
  }
  .p4-desc .p4-1951 {
- 	top: 431px;
+	top: 352px;
  }
  .p4-desc .p4-2016 {
- 	top: 431px;
+	top: 353px;
  }
  .p4-desc .p4-1951-text {
- 	top: 486.5px;
+	top: 403.5px;
  }
  .p4-desc .p4-2016-text {
- 	top: 486.5px;
+	top: 403.5px;
  }
  .p4-desc .p4-time-base{
  	width: 276px;
  	margin-left: -138px;
- 	top: 456.5px;
+	top: 378.5px;
  }
  .p4-desc .p4-time-point{
- 	top: 463px;
+	top: 385px;
  	left: 270px;
  }
  .p4-desc .p4-time-line {
  	width: 267px;
- 	top: 470px;
+	top: 392px;
  }
  .p4-desc .p4-up-text {
  	left: 13px;
@@ -672,7 +694,7 @@ and (max-device-height: 667px) {
  	}
  }
 .p4-desc .p4-desc-people-eara {
-	top: 46px;
+	top: 11px;
 	width: 240px;
 	margin-left: -120px;
  }
@@ -688,5 +710,52 @@ and (max-device-height: 667px) {
  .p4-desc .p4-right-circle2 {
  	top: 282px;
  }
+ .p4-desc .p4-desc-title {
+	top: 260px;
+ }
+ .p4-desc .p4-desc-text1 {
+	top: 291px;
+ }
+ .p4-desc .p4-desc-text2 {
+	top: 315px;
+ }
+ .p4-desc .p4-left-circle1 {
+	top: 62px;
+}
+.p4-desc .p4-left-circle2 {
+	top: 86px;
+}
+.p4-desc .p4-right-circle1 {
+	top: 226px;
+}
+.p4-desc .p4-right-circle2 {
+	top: 250px;
+}
+.play .dir-next {
+	opacity: 0;
+	-webkit-animation: show-in .2s linear 1.5s forwards, shake-next1 2s linear 1.7s infinite;
+}
+@keyframes show-in {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes shake-next1  {
+   0% {
+    bottom: -5px;
+  }
+  50% {
+    bottom: -1px;
+  }
+  100% {
+    bottom: -7px;
+  }
+}
 }
 </style>
