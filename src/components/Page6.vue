@@ -13,6 +13,7 @@
 			<div class="p6-desc-bg-dress-circle1"></div>
 			<div class="p6-desc-bg-dress-circle2"></div>
 			<div class="p6-circle">
+				<div class="p6-dw"></div>
 				<div class="p6-circle1"></div>
 				<div class="p6-circle1_1"></div>
 				<div class="p6-circle2"></div>
@@ -158,6 +159,16 @@ export default {
 	height: 14px;
 	left: 25px;
 	top: 179px;
+}
+.p6-desc .p6-dw {
+	background-image: url(../assets/images/p6_dw.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	position: absolute;
+	width: 67.5px;
+	height: 72px;
+	left: 193px;
+	top: 190px;
 }
 .p6-desc .p6-circle1 {
 	background-image: url(../assets/images/p6_circle1.png);

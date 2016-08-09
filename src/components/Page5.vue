@@ -155,11 +155,11 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 177px;
-	height: 68px;
+	width: 220.5px;
+	height: 81px;
 	left: 50%;
-	top: 454px;
-	margin-left: -88.5px;
+	top: 371px;
+	margin-left: -110.25px;
 }
 .p5-desc .p5-line-left {
 	background-image: url(../assets/images/p2_light.png);
@@ -403,7 +403,7 @@ export default {
  @media only screen
  and (max-device-width : 667px ) {
  	.p5-desc {
- 		height: 448px;
+ 		height: 455px;
  	}
  	.p5-desc .p5-desc-title {
 		top: 414px;
@@ -417,7 +417,7 @@ export default {
  .p5-desc {
  	top: 4px;
  	width: 320px;
- 	height: 365px;
+ 	height: 374px;
  	margin-left: -160px;
  }
  .p5-desc .p5-desc-top{

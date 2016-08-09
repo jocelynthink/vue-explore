@@ -50,20 +50,20 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 171.5px;
-	height: 274.5px;
+	width: 176.5px;
+	height: 245.5px;
 	left: 0px;
-	top: 127px;
+	top: 132px;
 }
 .p4-bg-right {
 	background-image: url(../assets/images/p4_bg_right.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 131px;
-	height: 71.5px;
+	width: 150px;
+	height: 222px;
 	right: 0px;
-	top: 120px;
+	top: 149px;
 }
 .p4-bg-grid {
 	background-image: url(../assets/images/p4_bg_grid.png);
@@ -74,6 +74,7 @@ export default {
 	height: 395.5px;
 	left: 0px;
 	top: 0px;
+	z-index: 60;
 }
 .p4-desc {
 	position: absolute;
@@ -315,8 +316,8 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 111px;
-	height: 27px;
+	width: 141px;
+	height: 29.5px;
 	top: 514.5px;
 	right: 20px;
 }
@@ -642,9 +643,11 @@ and (max-device-height: 667px) {
  }
  .p4-desc .p4-1951-text {
 	top: 403.5px;
+	left: 5px;
  }
  .p4-desc .p4-2016-text {
 	top: 403.5px;
+	right: 5px;
  }
  .p4-desc .p4-time-base{
  	width: 276px;

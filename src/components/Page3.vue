@@ -102,20 +102,20 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 181px;
-	height: 208.5px;
+	width: 139.5px;
+	height: 297.5px;
 	left: 0px;
-	top: 172px;
+	top: 100px;
 }
 .p3-bg-right{
 	background-image: url(../assets/images/p3_bg_right.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 169.5px;
-	height: 252.5px;
+	width: 165px;
+	height: 333px;
 	right: 0px;
-	top: 165px;
+	top: 75px;
 }
 .p3-bg-left-grid {
 	background-image: url(../assets/images/p3_bg_left_grid.png);
@@ -332,10 +332,10 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	left: 28px;
-	top: 82px;
-	width: 307px;
-	height: 300px;
+	left: 52px;
+	top: 119px;
+	width: 233px;
+	height: 251px;
 	z-index: 50;
 }
 .p3-desc .p3-up-people {
@@ -343,7 +343,7 @@ export default {
 	background-size: 1295px 363px;
 	background-repeat: no-repeat;
 	position: absolute;
-	left: 140px;
+	left: 133px;
 	top: 57px;
 	width: 185px;
 	height: 363px;
@@ -676,10 +676,11 @@ and (max-device-width : 320px){
 	top: 412px;
 }
 .p3-desc .p3-up-text {
-	left: 13px;
+	left: 44px;
+	top: 60px;
 }
 .p3-desc .p3-up-people {
-	left: 129px;
+	left: 128px;
 }
 .p3-desc .p3-right-circle1 {
 	top: 322px;

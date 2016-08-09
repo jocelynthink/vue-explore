@@ -332,10 +332,10 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	left: 94px;
-	top: 82px;
-	width: 230.5px;
-	height: 300.5px;
+	left: 95px;
+	top: 121px;
+	width: 202px;
+	height: 265.5px;
 	z-index: 50;
 }
 .p2-desc .p2-up-people {
@@ -343,8 +343,8 @@ export default {
 	background-size: 1295px 363px;
 	background-repeat: no-repeat;
 	position: absolute;
-	left: 140px;
-	top: 57px;
+	left: 133px;
+	top: 88px;
 	width: 185px;
 	height: 363px;
 	margin-left: -35.25px;
@@ -792,7 +792,7 @@ and (max-device-width : 320px){
 	margin-left: -160px;
 }
 .p2-desc .p2-up-text {
-	top: 50px;
+	top: 65px;
 }
 .p2-desc .p2-up-people{
 	top: 25px;
@@ -831,7 +831,7 @@ and (max-device-width : 320px){
 	top: 412px;
 }
 .p2-desc .p2-up-text {
-	left: 57px;
+	left: 63px;
 }
 .p2-desc .p2-up-people {
 	left: 100px;
