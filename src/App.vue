@@ -81,6 +81,7 @@ export default {
     changePage(){
       var div = document.getElementById('srcolldiv');
       if(this.isAndroid){
+        // alert(document.body.clientHeight);
         var top = - ((this.current - 1) * this.height) + 'px';
         div.style.WebkitTransform = 'translateY(' + top + ')';
       // }else{
