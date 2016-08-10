@@ -295,12 +295,12 @@ body {
 and (max-device-height: 736px)
 and (min-device-width: 414px){
   .music_play {
-    top: 46px;
-    right: 46px;
+    top: 32px;
+    right: 33px;
   }
   .music_stop{
-    top: 46px;
-    right: 46px;
+    top: 32px;
+    right: 33px;
   }
 }
 
