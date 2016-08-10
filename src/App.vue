@@ -106,7 +106,7 @@ export default {
           second = 2;
           break;
         case 6:
-          second = 3.5;
+          second = 5;
           break;
         case 7:
           second = 1;

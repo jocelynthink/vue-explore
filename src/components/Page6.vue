@@ -622,7 +622,7 @@ export default {
 
 .play .dir-next {
   opacity: 0;
-  -webkit-animation: showIn .2s linear 3.5s forwards, shake-next 1s ease-in 4s infinite;
+  -webkit-animation: showIn .2s linear 5s forwards, shake-next 1s ease-in 5s infinite;
 }
 @keyframes showIn {
   0% {
