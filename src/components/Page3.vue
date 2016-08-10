@@ -102,10 +102,10 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 139.5px;
-	height: 297.5px;
+	width: 203px;
+	height: 258px;
 	left: 0px;
-	top: 100px;
+	top: 125px;
 }
 .p3-bg-right{
 	background-image: url(../assets/images/p3_bg_right.png);
@@ -332,10 +332,10 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	left: 52px;
-	top: 119px;
-	width: 233px;
-	height: 251px;
+	left: 65px;
+	top: 132px;
+	width: 214.5px;
+	height: 231px;
 	z-index: 50;
 }
 .p3-desc .p3-up-people {
@@ -344,7 +344,7 @@ export default {
 	background-repeat: no-repeat;
 	position: absolute;
 	left: 133px;
-	top: 57px;
+	top: 70px;
 	width: 185px;
 	height: 363px;
 	margin-left: -35.25px;

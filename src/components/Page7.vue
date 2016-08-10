@@ -138,7 +138,7 @@ export default {
 	position: absolute;
 	width: 177px;
 	height: 51.5px;
-	top: 315px;
+	top: 371px;
 	left: 50%;
 	margin-left: -80.25px;
  }
@@ -147,11 +147,11 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 86.5px;
-	height: 27.5px;
-	top: 391px;
+	width: 120px;
+	height: 38px;
+	top: 445.5px;
 	left: 50%;
-	margin-left: -43.25px;
+	margin-left: -60px;
  }
  .p7-desc .p7-line-left {
  	background-image: url(../assets/images/p2_light.png);
@@ -396,7 +396,6 @@ export default {
 	left: -20px;
 }
 }
-
 
  @media only screen
  and (max-device-width : 736px)
