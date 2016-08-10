@@ -83,7 +83,7 @@ export default {
 .p7-top {
     position: relative;
     left: 50%;
-    margin-left: -171.5px;
+    margin-left: -175.5px;
 }
 .p7-desc .p7-desc-top {
 	background-image: url(../assets/images/p7_top.png);
