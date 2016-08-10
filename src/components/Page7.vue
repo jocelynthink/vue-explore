@@ -76,16 +76,20 @@ export default {
 	position: absolute;
 	width: 360px;
 	height: 516px;
-	top: 14px;
+	top: 8px;
 	left: 50%;
 	margin-left: -180px;
+}
+.p7-top {
+    position: relative;
+    left: 50%;
+    margin-left: -171.5px;
 }
 .p7-desc .p7-desc-top {
 	background-image: url(../assets/images/p7_top.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 372.5px;
 	width: 360px;
 	left: 50%;
 	margin-left: -180px;
@@ -128,7 +132,7 @@ export default {
 	position: absolute;
 	width: 262.5px;
 	height: 39.5px;
-	top: 216px;
+	top: 222px;
 	left: 55px;
  }
  .p7-desc .p7-desc-text {
@@ -138,7 +142,7 @@ export default {
 	position: absolute;
 	width: 177px;
 	height: 51.5px;
-	top: 371px;
+	top: 295.5px;
 	left: 50%;
 	margin-left: -80.25px;
  }
@@ -149,7 +153,7 @@ export default {
 	position: absolute;
 	width: 120px;
 	height: 38px;
-	top: 445.5px;
+	top: 448px;
 	left: 50%;
 	margin-left: -60px;
  }
@@ -160,7 +164,7 @@ export default {
  	position: absolute;
  	width: 1px;
  	height: 276px;
- 	left: 5px;
+ 	left: 0px;
  	top: 50px;
  	z-index: 10;
  }
@@ -171,7 +175,7 @@ export default {
  	position: absolute;
  	width: 1px;
  	height: 276px;
- 	right: 7px;
+ 	right: 0px;
  	top: 50px;
  	z-index: 10;
  }
@@ -391,9 +395,11 @@ export default {
 .p7-desc .p7-desc-button{
 	left: 36px;
 }
- .p7-top{
-	position: relative;
-	left: -20px;
+.p7-desc .p7-desc-text{
+	top: 300px;
+}
+.p7-desc .p7-desc-logo {
+	top: 370px;
 }
 }
 
@@ -404,8 +410,7 @@ export default {
  		height: 600px;
  	}
  	.p7-top {
- 		position: relative;
- 		left: 30px;
+ 		/*position: relative;*/
  	}
  }
 </style>

@@ -222,8 +222,8 @@ body {
   background: url(./assets/images/music_play.png) 0px 0px no-repeat;
   background-size: 100%;
   position: absolute;
-  top: 40px;
-  right: 23px;
+  top: 28px;
+  right: 14px;
   z-index: 99;
   width: 35px;
   height: 35px;
@@ -233,8 +233,8 @@ body {
   background: url(./assets/images/music_stop.png) 0px 0px no-repeat;
   background-size: 100%;
   position: absolute;
-  top: 40px;
-  right: 23px;
+  top: 28px;
+  right: 14px;
   z-index: 99;
   width: 35px;
   height: 35px;

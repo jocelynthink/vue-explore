@@ -139,7 +139,7 @@ export default {
 	width: 81px;
 	height: 81px;
  	left: 271px;
-	top: 362px;
+	top: 356.5px;
 }
 .p6-desc .p6-desc-center .p6-desc-title-left {
 	background-image: url(../assets/images/p6_title_left.png);
@@ -205,10 +205,10 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 67px;
-	height: 66px;
-	left: 98px;
-	top: 357.5px;
+  width: 67px;
+  height: 66px;
+  left: 98px;
+  top: 357px;
 }
 .p6-desc .p6-circle3 {
 	background-image: url(../assets/images/p6_circle3.png);
@@ -237,25 +237,25 @@ export default {
 	position: absolute;
 	width: 58px;
 	height: 58px;
-	left: 190px;
-	top: 335px;
+  left: 187px;
+  top: 332px;
 }
 .p6-desc .p6-circle4_1 {
 	background-image: url(../assets/images/p6_circle4_1.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 64px;
-	height: 63.5px;
-	left: 186px;
-	top: 333px;
+	width: 64.5px;
+	height: 65px;
+  left: 183.5px;
+  top: 328.5px;
 }
 .p6-desc .p6-circle5 {
 	background-image: url(../assets/images/p6_circle5.png);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 84px;
+	width: 89px;
 	height: 84px;
 	left: 255px;
 	top: 250px;
@@ -265,10 +265,10 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 91px;
-	height: 91.5px;
-	left: 252px;
-	top: 246px;
+	width: 88.5px;
+	height: 89px;
+	left: 253.5px;
+   top: 247px;
 }
 .p6-desc .p6-circle6 {
 	background-image: url(../assets/images/p6_circle6.png);
