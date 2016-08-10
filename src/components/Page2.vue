@@ -603,6 +603,7 @@ and (max-device-height: 500px) {
   .p2-desc {
     height: 460px;
   }
+
 }
 
 @media only screen
@@ -610,7 +611,30 @@ and (max-device-height: 667px) {
 	.p2-desc {
 		height: 560px;
 	}
-
+}
+@media only screen
+and (max-device-height: 460px) {
+  .p2-time-base{
+    display: none;
+  }
+  .p2-time-point{
+    display: none;
+  }
+  .p2-time-line{
+    display: none;
+  }
+  .p2-1935{
+    display: none;
+  }
+  .p2-2016{
+    display: none;
+  }
+  .p2-1935-text{
+    display: none;
+  }
+  .p2-2016-text{
+    display: none;
+  }
 }
 @media only screen
 and (max-device-height: 736px)

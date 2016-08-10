@@ -617,6 +617,30 @@ and (max-device-height: 667px) {
 	}
 }
 @media only screen
+and (max-device-height: 460px) {
+  .p4-time-base{
+    display: none;
+  }
+  .p4-time-point{
+    display: none;
+  }
+  .p4-time-line{
+    display: none;
+  }
+  .p4-1951{
+    display: none;
+  }
+  .p4-2016{
+    display: none;
+  }
+  .p4-1951-text{
+    display: none;
+  }
+  .p4-2016-text{
+    display: none;
+  }
+}
+@media only screen
  and (max-device-width : 350px){
  .dir-next {
  	bottom: -5px;
