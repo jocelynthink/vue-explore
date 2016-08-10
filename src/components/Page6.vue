@@ -502,6 +502,20 @@ export default {
 		-webkit-transform:  rotate(360deg);
 	}
 }
+
+.play .p6-dw{
+  opacity: 0;
+  -webkit-animation: show-dw .5s linear 3.5s forwards;
+}
+@keyframes show-dw {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .play .p6-line1 {
 	opacity: 0;
 	-webkit-animation: show-line-1 .5s linear 2.5s forwards;
@@ -669,7 +683,7 @@ export default {
  	}
  }
 @media only screen
- and (max-device-width : 320px){
+ and (max-device-width : 350px){
  .dir-next {
  	bottom: -5px;
  }

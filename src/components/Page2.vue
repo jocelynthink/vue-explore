@@ -499,7 +499,7 @@ export default {
 }
 .play .dir-next {
   opacity: 0;
-  -webkit-animation: showIn .2s linear 1.8s forwards, shake-next 1s ease-in 2.1s infinite;
+  -webkit-animation: showIn .2s linear 4s forwards, shake-next 1s ease-in 4.3s infinite;
 }
 @keyframes showIn {
   0% {
@@ -741,17 +741,16 @@ export default {
 
 
 @media only screen
-and (max-device-height: 480px) {
-
+and (max-device-height: 500px) {
   .p2-desc {
-    /*top: 210px;*/
+    height: 460px;
   }
 }
 
 @media only screen
 and (max-device-height: 667px) {
 	.p2-desc {
-		height: 615px;
+		height: 560px;
 	}
 
 }
@@ -777,7 +776,7 @@ and (max-device-height: 736px)
 }
 
 @media only screen
-and (max-device-width : 320px){
+and (max-device-width : 350px){
 .dir-next {
  	bottom: -5px;
 }

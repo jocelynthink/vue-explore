@@ -291,5 +291,17 @@ body {
   height: 100vh;
   position: relative;
 }
+@media only screen
+and (max-device-height: 736px)
+and (min-device-width: 414px){
+  .music_play {
+    top: 46px;
+    right: 46px;
+  }
+  .music_stop{
+    top: 46px;
+    right: 46px;
+  }
+}
 
 </style>

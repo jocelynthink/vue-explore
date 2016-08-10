@@ -601,7 +601,7 @@ export default {
 @media only screen
 and (max-device-height: 667px) {
 	.p3-desc {
-		height: 615px;
+		height: 560px;
 	}
 }
 @media only screen
@@ -626,7 +626,7 @@ and (max-device-height: 736px)
 }
 
 @media only screen
-and (max-device-width : 320px){
+and (max-device-width : 350px){
 .dir-next {
  	bottom: -5px;
  }
@@ -718,7 +718,7 @@ and (max-device-width : 320px){
 }
 .play .dir-next {
 	opacity: 0;
-	-webkit-animation: show-in .2s linear 1.5s forwards, shake-next1 2s linear 1.7s infinite;
+	-webkit-animation: show-in .2s linear 4s forwards, shake-next1 2s linear 4.3s infinite;
 }
 @keyframes show-in {
   0% {

@@ -23,7 +23,7 @@
 </template>
 
 <script>
-export default {	
+export default {
 	props: {
 		current: {
 			type: Number
@@ -366,7 +366,7 @@ export default {
 	}
 }
 @media only screen
- and (max-device-width : 320px){
+ and (max-device-width : 350px){
  .dir-next {
  	bottom: -5px;
  }

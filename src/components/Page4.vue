@@ -613,11 +613,11 @@ and (max-device-height: 736px)
 @media only screen
 and (max-device-height: 667px) {
 	.p4-desc {
-		height: 615px;
+		height: 560px;
 	}
 }
 @media only screen
- and (max-device-width : 320px){
+ and (max-device-width : 350px){
  .dir-next {
  	bottom: -5px;
  }
