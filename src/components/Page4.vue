@@ -296,8 +296,8 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 139px;
-	height: 29px;
+	width: 97.5px;
+	height: 27.5px;
 	top: 514.5px;
 	left: 24px;
 }
@@ -316,7 +316,7 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 141px;
+	width: 144px;
 	height: 29.5px;
 	top: 514.5px;
 	right: 20px;
