@@ -174,10 +174,10 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 141px;
-	height: 30px;
+	width: 144px;
+	height: 29.5px;
 	left: 50%;
-	margin-left: -70.5px;
+	margin-left: -72px;
 	top: 371px;
 }
 /* 四角圆圈 */
@@ -296,8 +296,8 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 97.5px;
-	height: 27.5px;
+	width: 139px;
+	height: 29px;
 	top: 514.5px;
 	left: 24px;
 }
@@ -314,10 +314,10 @@ export default {
 .p4-desc .p4-2016-text {
 	background-image: url(../assets/images/p4_2016_text.png);
 	background-size: 100% 100%;
-	background-repeat: no-repeat;
+	background-repeat: no-repeat ;
 	position: absolute;
-	width: 144px;
-	height: 29.5px;
+	width: 97px;
+	height: 27.5px;
 	top: 514.5px;
 	right: 20px;
 }
