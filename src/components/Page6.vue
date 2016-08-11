@@ -713,6 +713,19 @@ export default {
  	width: 288px;
     margin-left: -144px
  }
+ .p6-desc .p6-desc-center .p6-desc-title {
+	width: 300px;
+	height: 50px;
+	margin-left: -150px;
+ }
+ .p6-desc .p6-desc-bg-dress-circle1 {
+ 	left: -25px;;
+ 	top: 236px;
+ }
+  .p6-desc .p6-desc-bg-dress-circle2 {
+  	left: 247px;
+ 	top: 342px;
+ }
 .p6-desc .p6-circle {
 	position: relative;
     left: -24px;
