@@ -6,8 +6,8 @@
 			<div class="p6-desc-bottom"></div>
 			<div class="p6-desc-center">
 				<div class="p6-desc-title"></div>
-				<div class="p6-desc-title-left"></div>
-				<div class="p6-desc-title-right"></div>
+<!-- 				<div class="p6-desc-title-left"></div>
+				<div class="p6-desc-title-right"></div> -->
 			</div>
 			<div class="p6-desc-text"></div>
 			<div class="p6-desc-bg-dress-circle1"></div>
@@ -116,10 +116,10 @@ export default {
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	position: absolute;
-	width: 242px;
-	height: 43.5px;
+	width: 329px;
+	height: 59px;
 	left: 50%;
-	margin-left: -121px;
+	margin-left: -164.5px;
 }
 .p6-desc .p6-desc-bg-dress-circle1 {
 	background-image: url(../assets/images/p6_dress_circle1.png);
@@ -129,7 +129,7 @@ export default {
 	width: 134.5px;
 	height: 140.5px;
 	left: 0;
-	top: 254px;
+	top: 297px;
 }
 .p6-desc .p6-desc-bg-dress-circle2 {
 	background-image: url(../assets/images/p6_dress_circle2.png);
@@ -139,7 +139,7 @@ export default {
 	width: 81px;
 	height: 81px;
  	left: 271px;
-	top: 356.5px;
+	top: 405px;
 }
 .p6-desc .p6-desc-center .p6-desc-title-left {
 	background-image: url(../assets/images/p6_title_left.png);
@@ -158,7 +158,7 @@ export default {
 	width: 63px;
 	height: 14px;
 	left: 25px;
-	top: 179px;
+	top: 232px;
 }
 .p6-desc .p6-dw {
 	background-image: url(../assets/images/p6_dw.png);
@@ -169,6 +169,10 @@ export default {
 	height: 72px;
 	left: 193px;
 	top: 190px;
+}
+.p6-desc .p6-circle {
+	position: relative;
+	top: 43px;
 }
 .p6-desc .p6-circle1 {
 	background-image: url(../assets/images/p6_circle1.png);
@@ -289,6 +293,10 @@ export default {
 	height: 66px;
 	left: 279px;
 	top: 369px;
+}
+.p6-desc .p6-line {
+	position: relative;
+	top: 43px;
 }
 .p6-desc .p6-line1 {
 	background-image: url(../assets/images/p6_line1.png);
