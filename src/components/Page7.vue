@@ -9,7 +9,7 @@
 			<div class="p7-desc-top"></div>
 			<div class="p7-desc-bottom"></div>
 			<div class="p7-desc-grid"></div>
-			<a href="http://km.oa.com/group/explorer"><div class="p7-desc-button"></div></a>
+			<a href="https://km.tencent.com/openkm/url/qo3uso"><div class="p7-desc-button"></div></a>
 			<div class="p7-desc-text"></div>
 			<div class="p7-desc-logo"></div>
 			<div class="p7-line-left"></div>
