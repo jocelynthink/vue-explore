@@ -7,7 +7,7 @@
   <div  id="srcolldiv" class="scroll-list"
         v-touch:swipeup="swipeup"
         v-touch:swipedown="swipedown"
-        :style="{'height':`${isAndroid ? '100vh' : count * 100 + '%'}`, 'marginTop':`${isAndroid ? '' : (-100*(current-1) + 'vh')}`}"
+        :style="{'height':`${isAndroid ? '100%' : count * 100 + '%'}`, 'marginTop':`${isAndroid ? '' : (-100*(current-1) + '%')}`}"
        v-if="!isLoading">
     <page1 :current.sync="current"></page1>
     <page2 :current.sync="current"></page2>
@@ -252,44 +252,44 @@ body {
 .scroll-list {
   -webkit-transition: all .5s ease-out;
   position: absolute;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 .page1 {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 .page2 {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 .page3 {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 .page4 {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(top , #03090F 0%, #000025 30%, #03090F 100%);
   position: relative;
 }
 .page5 {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 .page6 {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 .page7 {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 @media only screen
