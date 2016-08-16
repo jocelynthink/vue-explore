@@ -15,7 +15,7 @@ var wechat =
 {
   imgUrl:'https://hr.m.tencent.com/explorer/images/weixin.png',
   lineLink : window.location.origin + window.location.pathname,
-  shareTitle : 'Tencent Explorer第二弹火热招募',  //分享title
+  shareTitle : 'CXO约你看未来：Tencent Explorer第二弹火热招募',  //分享title
   shareDesc :'申请赴硅谷探索，下一位探索者是你么？',
   appid :'', //apiID，可留空
   init:function()
